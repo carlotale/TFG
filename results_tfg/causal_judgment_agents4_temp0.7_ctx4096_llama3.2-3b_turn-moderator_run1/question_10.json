@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.7_ctx4096_llama3.2-3b_turn-moderator_run1",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "moderator",
+        "run_id": 1,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-09T20:43:48",
+            "elapsed_seconds_total": 61.581,
+            "n_turns": 5,
+            "avg_seconds_per_turn": 12.316,
+            "per_turn_seconds": [
+                7.921,
+                12.723,
+                12.107,
+                13.633,
+                15.197
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Legal_Expert": 2,
+                "Causal_Scientist": 1,
+                "Ethical_Philosopher": 1,
+                "Ordinary_Citizen": 1
+            },
+            "turn_lengths_chars": [
+                1148,
+                1054,
+                778,
+                909,
+                1049
+            ]
+        }
+    },
+    "input": "Prof. Smith works at a large university. At this university, in order to get new computers from the university, faculty like Prof. Smith must send an application to two administrative committees, the IT committee and the department budget committee. Prof. Smith will be able to get her new computers if the IT committee approves her application or the department budget committee approves her application. Only one of the committees needs to approve her application for her to get the new computers. The IT committee almost always approves these applications. The department budget committee also almost always approves these applications. The budget committee is notorious for approving almost every application they receive. Prof. Smith sends in her applications. Each committee meets independently and they decide without talking to each other, but their meetings are scheduled for the exact same time. The IT committee approves her application, and as expected, the department budget committee approves her application. So, Prof. Smith got her new computers. Does the department budget committee cause the approval of Prof. Smith's application?",
+    "debate_transcript": [
+        "[Legal_Expert]: Prof. Smith works at a large university. At this university, in order to get new computers from the university, faculty like Prof. Smith must send an application to two administrative committees, the IT committee and the department budget committee. Prof. Smith will be able to get her new computers if the IT committee approves her application or the department budget committee approves her application. Only one of the committees needs to approve her application for her to get the new computers. The IT committee almost always approves these applications. The department budget committee also almost always approves these applications. The budget committee is notorious for approving almost every application they receive. Prof. Smith sends in her applications. Each committee meets independently and they decide without talking to each other, but their meetings are scheduled for the exact same time. The IT committee approves her application, and as expected, the department budget committee approves her application. So, Prof. Smith got her new computers. Does the department budget committee cause the approval of Prof. Smith's application?",
+        "[Causal_Scientist]: That's a tricky question! According to counterfactual logic, we can analyze this situation by considering what would have happened if the IT committee had not approved Prof. Smith's application. In that case, her new computers would not have been granted. Now, let's consider an alternative scenario: if the department budget committee had not approved Prof. Smith's application, she would not have received new computers either. This shows that both committees are necessary for the approval of Prof. Smith's application to occur. If we say that the department budget committee causes the approval of Prof. Smith's application, then we would be implying that her application was granted because the budget committee approved it, even if the IT committee had not approved it. But this seems implausible, since both committees have independent decision-making processes and no communication with each other. So, based on my analysis of counterfactuals, I'd say that the department budget committee does not cause the approval of Prof. Smith's application.",
+        "[Ethical_Philosopher]: Counterfactual logic can be a useful tool in analyzing causality, but it's also important to consider the concept of supervenience. The question is whether the department budget committee's decision is what causes the outcome (the approval of Prof. Smith's application), or if that outcome is simply a result of both committees approving the same request. In this scenario, the IT committee almost always approves applications, which means that Prof. Smith would have gotten her new computers even without the budget committee's approval. This suggests that the budget committee's decision may be supervenient on the IT committee's decision, meaning that the outcome is determined by the IT committee's action, rather than being caused by the department budget committee itself.",
+        "[Ordinary_Citizen]: I think I understand what you're both getting at, but my intuition tells me that the department budget committee does cause Prof. Smith's application to be approved. The fact that the IT committee almost always approves applications makes it seem like their decision is more independent of the budget committee's, but if they didn't approve her application, she wouldn't have gotten new computers either. It feels like there's some kind of underlying influence at play here, even if we can't see who actually pulled the lever. I'm not sure about supervenience or counterfactual logic, but it just seems to me that if one committee didn't approve her application, she wouldn't have gotten new computers either. So, in a way, both committees are necessary, but they're doing different jobs, and I think you could say the budget committee's job is what ultimately causes Prof. Smith's application to be approved.",
+        "[Legal_Expert]: I see why Causal_Scientist thinks that counterfactual logic suggests the department budget committee doesn't cause Prof. Smith's application approval. But I agree with Ordinary_Citizen that there is an underlying influence at play here, and I'd like to add that it's not necessarily about who's pulling the lever or making a direct causal link between the two committees. The fact that both committees approve applications almost always means that the IT committee's decision effectively determines the outcome, regardless of whether the budget committee approves or not. It's more like the budget committee is a safety net, ensuring that Prof. Smith gets her computers even if the IT committee didn't approve. So, in this sense, I think it's reasonable to say that the department budget committee causes Prof. Smith's application approval, but only in the sense that their decision is necessary for the outcome to occur, given the IT committee's decision. We're not talking about a direct causal link between the two committees, just a logical one."
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "Yes",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7645,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 987.6,
+            "median_turn_length_chars": 1049.0,
+            "max_speaker_share": 0.4
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7645,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 987.6,
+            "median_turn_length_chars": 1049.0,
+            "max_speaker_share": 0.4
+        }
+    }
+}

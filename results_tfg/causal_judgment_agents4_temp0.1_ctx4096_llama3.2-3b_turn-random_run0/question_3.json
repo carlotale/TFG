@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.1_ctx4096_llama3.2-3b_turn-random_run0",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "random",
+        "run_id": 0,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-09T16:59:33",
+            "elapsed_seconds_total": 8.916,
+            "n_turns": 2,
+            "avg_seconds_per_turn": 4.458,
+            "per_turn_seconds": [
+                0.115,
+                8.801
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Legal_Expert": 1,
+                "Ethical_Philosopher": 1
+            },
+            "turn_lengths_chars": [
+                528,
+                641
+            ]
+        }
+    },
+    "input": "Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+    "debate_transcript": [
+        "[Legal_Expert]: Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+        "[Ethical_Philosopher]: That's an interesting scenario, but I'd argue that causality isn't quite as straightforward here. The motion detector was triggered by Suzy and Billy arriving simultaneously, which is a coincidence rather than a deliberate action on their part. It's not like Billy intentionally set out to cause the motion detector to go off; he simply showed up at the same time as Suzy. We need to consider the concept of 'proximal cause' - what directly leads to an effect. In this case, it was the simultaneous arrival of both Suzy and Billy that led to the motion detector being triggered. So, I wouldn't say Billy caused the motion detector to go off."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7724,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 2,
+            "unique_speakers": 2,
+            "silent_agents": 2,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 584.5,
+            "median_turn_length_chars": 584.5,
+            "max_speaker_share": 0.5
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7724,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 2,
+            "unique_speakers": 2,
+            "silent_agents": 2,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 584.5,
+            "median_turn_length_chars": 584.5,
+            "max_speaker_share": 0.5
+        }
+    }
+}

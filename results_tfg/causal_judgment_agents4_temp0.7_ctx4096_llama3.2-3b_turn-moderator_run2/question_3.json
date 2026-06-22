@@ -1,0 +1,99 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.7_ctx4096_llama3.2-3b_turn-moderator_run2",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "moderator",
+        "run_id": 2,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-09T20:50:29",
+            "elapsed_seconds_total": 64.844,
+            "n_turns": 6,
+            "avg_seconds_per_turn": 10.807,
+            "per_turn_seconds": [
+                7.825,
+                7.613,
+                10.615,
+                13.95,
+                12.246,
+                12.595
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 2,
+                "Legal_Expert": 2,
+                "Ethical_Philosopher": 1,
+                "Ordinary_Citizen": 1
+            },
+            "turn_lengths_chars": [
+                528,
+                505,
+                603,
+                939,
+                869,
+                795
+            ]
+        }
+    },
+    "input": "Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+    "debate_transcript": [
+        "[Causal_Scientist]: Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+        "[Legal_Expert]: This scenario is a classic example of a 'categorical mistake' in ethics, where we conflate causality with moral responsibility. The motion detector's trigger was set to be activated by multiple individuals arriving simultaneously, not by any specific individual causing the sensor to go off. In this case, it's more accurate to say that the motion detector went off due to Billy and Suzy both being in the room at 9 am. Billy did not cause the motion detector to go off; he was simply a part of the event.",
+        "[Ethical_Philosopher]: I think Legal_Expert raises an interesting point, but I'd like to add some nuance to the discussion. While it's true that the motion detector's trigger wasn't set to be activated by Billy causing it to go off, I'd argue that this doesn't entirely absolve Billy of any moral responsibility. In a sense, Billy's presence in the room at 9 am is what made Suzy's presence there possible - their individual actions are linked and inseparable from each other. By being present at the same time, Billy contributed to the condition that led to the motion detector going off, even if he didn't directly cause it.",
+        "[Ordinary_Citizen]: I think Ethical_Philosopher makes a compelling point about causality and moral responsibility. However, I'm still not convinced that Billy's presence alone is enough to make him morally responsible for the motion detector going off. To me, it seems like both Suzy and Billy are just following orders from their boss - they're both simply responding to the same external cue (the 9 am arrival time). If we start assigning moral responsibility to Billy because he was present in the room at 9 am, then doesn't that imply that Suzy is morally responsible too? Or that the motion detector's presence in the room somehow puts us all on the hook for its actions? It seems like we're creating a false narrative here. What if we reframe this as a situation where two people are following the same instruction from their boss, and it's not about who caused the sensor to go off, but rather about the fact that they both followed the same procedure?",
+        "[Legal_Expert]: Ordinary_Citizen raises an excellent point about reframing the scenario. The motion detector's presence in the room could be seen as a neutral third-party factor, similar to how a traffic light is not morally responsible for the actions of drivers who follow its signals. In this context, it's more accurate to focus on Suzy and Billy's individual actions, rather than their collective presence in the room. By following the same instruction from their boss, they both demonstrated obedience and adherence to a clear protocol. The motion detector's activation is an unfortunate byproduct of their joint action, but that doesn't necessarily make one person morally responsible for the other's actions. We should consider whether Billy's individual moral responsibility can be discerned from his actions alone, without assuming causality or shared moral agency with Suzy.",
+        "[Causal_Scientist]: I think Legal_Expert and Ethical_Philosopher are onto something here. However, I'd like to introduce a counterfactual element into the discussion. What if Billy had arrived 5 minutes earlier than Suzy? Would that change the situation? In this case, it's possible that Billy's presence in the room would not have triggered the motion detector. The trigger was set for simultaneous arrivals, and if Billy had been alone or even with only one other person, he might not have caused the sensor to go off. This highlights the importance of considering counterfactual scenarios when evaluating causality and moral responsibility. By thinking about what would have happened if circumstances were different, we can gain a deeper understanding of the relationships between actions and their consequences."
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "No",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7747,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 6,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.1667,
+            "avg_turn_length_chars": 706.5,
+            "median_turn_length_chars": 699.0,
+            "max_speaker_share": 0.3333
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7747,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 6,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.1667,
+            "avg_turn_length_chars": 706.5,
+            "median_turn_length_chars": 699.0,
+            "max_speaker_share": 0.3333
+        }
+    }
+}

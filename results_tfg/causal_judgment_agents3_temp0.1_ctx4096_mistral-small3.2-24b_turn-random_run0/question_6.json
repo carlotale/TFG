@@ -1,0 +1,107 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents3_temp0.1_ctx4096_mistral-small3.2-24b_turn-random_run0",
+        "category": "causal",
+        "num_agents": 3,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "mistral-small3.2:24b",
+        "turn_policy": "random",
+        "run_id": 0,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-16T23:25:30",
+            "elapsed_seconds_total": 97.22,
+            "n_turns": 9,
+            "avg_seconds_per_turn": 10.802,
+            "per_turn_seconds": [
+                0.102,
+                10.432,
+                12.181,
+                10.965,
+                12.587,
+                13.585,
+                12.954,
+                14.095,
+                10.319
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Ordinary_Citizen": 5,
+                "Causal_Scientist": 2,
+                "Ethical_Philosopher": 2
+            },
+            "turn_lengths_chars": [
+                419,
+                537,
+                576,
+                471,
+                544,
+                660,
+                511,
+                613,
+                227
+            ]
+        }
+    },
+    "input": "Frank T., had an ongoing dispute with his neighbor over a stretch of land and one day decided to shoot his neighbor in the body. Frank T. had no experience with guns, his hand slipped on the barrel of the gun, and the shot went wild. Nonetheless, the bullet bounced off a large boulder several feet away and hit the neighbor's body, causing significant injury. Did Frank T. intentionally shoot his neighbor in the body?",
+    "debate_transcript": [
+        "[Ordinary_Citizen]: Frank T., had an ongoing dispute with his neighbor over a stretch of land and one day decided to shoot his neighbor in the body. Frank T. had no experience with guns, his hand slipped on the barrel of the gun, and the shot went wild. Nonetheless, the bullet bounced off a large boulder several feet away and hit the neighbor's body, causing significant injury. Did Frank T. intentionally shoot his neighbor in the body?",
+        "[Causal_Scientist]: From a causal perspective, we need to examine the chain of events and Frank T.'s intentions. Frank T. intended to shoot his neighbor, but due to his inexperience, the shot went awry. The injury was caused by the bullet bouncing off a boulder, which was an unforeseen consequence. So, while Frank T. had the intention to shoot his neighbor, the actual injury was not directly caused by his intentional action. It's a matter of the causal chain being interrupted by an unexpected event. What are your thoughts on this, Ethical_Philosopher?",
+        "[Ordinary_Citizen]: I see where you're coming from, Causal_Scientist, but I'm not sure I agree. From an ethical standpoint, intent matters a great deal. Frank T. intended to shoot his neighbor, even if his lack of experience led to the shot going astray. The fact that the bullet bounced off a boulder and still hit the neighbor doesn't negate the initial intent to harm. So, in my view, yes, Frank T. did intentionally shoot his neighbor, even if the outcome wasn't exactly what he planned. What do you think, Ordinary_Citizen? Does intent matter as much as the actual outcome in this situation?",
+        "[Causal_Scientist]: I see your point, Ethical_Philosopher. However, I'm not sure I agree. From a causal standpoint, the injury was not a direct result of Frank T.'s intentional action. The boulder's intervention was an independent event that altered the causal chain. So, while intent is important, the actual cause of the injury was the boulder, not Frank T.'s direct action. Ordinary_Citizen, what do you think? Should we focus more on the direct cause of the injury or the initial intent?",
+        "[Ordinary_Citizen]: I'm not sure about all this fancy talk about causality and intent. To me, it seems pretty straightforward. Frank T. wanted to shoot his neighbor, he tried to do it, and his neighbor got hurt because of it. The fact that the bullet bounced off a rock doesn't change that he tried to shoot him. I mean, if I try to hit someone with a ball but it bounces off a wall and hits them, I'm still the one who tried to hit them, right? So yeah, I think he did intentionally shoot his neighbor, even if he didn't mean for it to happen exactly like it did.",
+        "[Ethical_Philosopher]: I appreciate both of your perspectives here. Causal_Scientist, your focus on the causal chain is insightful, and Ordinary_Citizen, your emphasis on intent resonates with traditional ethical views. However, let's delve deeper into the ethical implications. If we consider the doctrine of double effect, we might argue that Frank T. had a good intention (resolving the dispute) but also a bad intention (shooting his neighbor). The harm came about as a direct effect of his action, not as a side effect. This complicates the moral assessment. What do you both think about applying the doctrine of double effect in this scenario? Does it change your perspectives?",
+        "[Ordinary_Citizen]: I'm not sure I understand all that fancy philosophy stuff, but if you're saying that Frank T. thought shooting his neighbor would solve their dispute, that's just crazy. You don't solve disputes by shooting people! I mean, sure, he might have thought it would help, but that doesn't make it right. And it doesn't change the fact that he tried to shoot his neighbor and ended up hurting him. So, no, I don't think that changes anything. He still did it on purpose, even if he thought it would make things better.",
+        "[Ethical_Philosopher]: I understand your point, Ordinary_Citizen. It's clear that Frank T.'s action was morally wrong, regardless of his perceived justification. The doctrine of double effect is indeed complex, but it's essential to consider whether the bad effect (injuring his neighbor) was intended as a means to the good effect (resolving the dispute). If Frank T. believed that harming his neighbor was necessary to resolve the dispute, then the harm was intended as a means, making his action morally impermissible. Causal_Scientist, does this ethical framework align with your causal perspective, or do you see any discrepancies?",
+        "[Ordinary_Citizen]: I think I need to get going. This is all getting a bit too complicated for me. I just know that trying to shoot someone is wrong, no matter what happens after that. I've got to get back to work now. Thanks for the chat, though!"
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "No",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7757,
+            "bleu": 0.0013,
+            "rouge_l": 0.0132
+        },
+        "dynamics": {
+            "turns_taken": 9,
+            "unique_speakers": 3,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.2222,
+            "avg_turn_length_chars": 506.44,
+            "median_turn_length_chars": 537.0,
+            "max_speaker_share": 0.5556
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "No",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7757,
+            "bleu": 0.0013,
+            "rouge_l": 0.0132
+        },
+        "dynamics": {
+            "turns_taken": 9,
+            "unique_speakers": 3,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.2222,
+            "avg_turn_length_chars": 506.44,
+            "median_turn_length_chars": 537.0,
+            "max_speaker_share": 0.5556
+        }
+    }
+}

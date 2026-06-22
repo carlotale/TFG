@@ -1,0 +1,95 @@
+{
+    "metadata": {
+        "scenario": "moral_permissibility_agents4_temp0.1_ctx4096_llama3.2-3b_turn-random_run0",
+        "category": "moral",
+        "num_agents": 4,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "random",
+        "run_id": 0,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-22T13:12:21",
+            "elapsed_seconds_total": 38.128,
+            "n_turns": 5,
+            "avg_seconds_per_turn": 7.626,
+            "per_turn_seconds": [
+                0.119,
+                7.571,
+                9.527,
+                8.96,
+                11.951
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Pragmatist": 2,
+                "Utilitarian": 2,
+                "Deontologist": 1
+            },
+            "turn_lengths_chars": [
+                578,
+                487,
+                633,
+                583,
+                897
+            ]
+        }
+    },
+    "input": "A runaway trolley is speeding down the tracks towards five workmen who will be killed if the trolley continues on its present course. You are standing next to the tracks, but you are too far away to warn them. Next to you is a very large stranger. If you push the large stranger onto the tracks, the trolley will slide off the tracks and won\u2019t continue its course towards the workmen. This will kill the stranger, but you will save the five workmen. Do you cause the trolley to derail by pushing the stranger onto the tracks, so that the trolley does not reach the five workmen?",
+    "debate_transcript": [
+        "[Pragmatist]: A runaway trolley is speeding down the tracks towards five workmen who will be killed if the trolley continues on its present course. You are standing next to the tracks, but you are too far away to warn them. Next to you is a very large stranger. If you push the large stranger onto the tracks, the trolley will slide off the tracks and won\u2019t continue its course towards the workmen. This will kill the stranger, but you will save the five workmen. Do you cause the trolley to derail by pushing the stranger onto the tracks, so that the trolley does not reach the five workmen?",
+        "[Utilitarian]: This is a classic thought experiment, and I must admit it's a difficult one for me as a utilitarian. On one hand, saving the lives of five people would be a significant moral gain. However, I also have to consider the moral implications of actively causing the death of an innocent stranger. It's not just about numbers; it's about the inherent value and dignity of human life. Can we truly justify sacrificing one person for the greater good? I'm not sure I can bring myself to do that.",
+        "[Deontologist]: I understand your reservations, Utilitarian, but as a deontologist, I must consider the moral rule at stake here. The principle of non-maleficence (do no harm) is paramount in my view. Pushing the stranger onto the tracks would be an intentional act of causing his death, which would be morally wrong regardless of the consequences for the five workmen. It's not about numbers or utility; it's about respecting the inherent value and dignity of human life. If we start justifying actions that result in harm to one person as a means to an end, where do we draw the line? Would we also justify sacrificing others for the greater good?",
+        "[Utilitarian]: I see your point, Deontologist, but I still struggle with the idea of absolute moral rules. As a utilitarian, I believe that morality is often about context and consequences. In this case, the consequences are clear: five lives would be saved at the cost of one life. But what if there were other options available? What if we could divert the trolley in some way without actively causing harm to the stranger? Would that not be a more morally justifiable action? I'm not saying it's an easy decision, but I think we need to consider all possible alternatives before making a choice.",
+        "[Pragmatist]: I understand your concerns about absolute moral rules, Utilitarian, and I agree that context and consequences play a significant role in my view as well. However, when it comes to the stranger's life, I believe that certain moral principles take precedence over utility calculations. The principle of non-maleficence is not just about avoiding harm, but also about respecting the inherent value and dignity of human life. In this case, pushing the stranger onto the tracks would be a violation of that principle, regardless of the consequences for the five workmen. I'm not saying we can't explore alternative solutions, but if diverting the trolley is truly possible without actively causing harm to the stranger, then that's a different story altogether. But let's assume it's not an option - in that case, do you think it's morally justifiable to sacrifice one life for the sake of five others?"
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7696,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.1333,
+            "avg_turn_length_chars": 635.6,
+            "median_turn_length_chars": 583.0,
+            "max_speaker_share": 0.4
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7696,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.1333,
+            "avg_turn_length_chars": 635.6,
+            "median_turn_length_chars": 583.0,
+            "max_speaker_share": 0.4
+        }
+    }
+}

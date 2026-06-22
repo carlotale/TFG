@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_baseline_temp0.7_ctx4096_llama3.2-3b_run2",
+        "category": "causal_judgment",
+        "num_agents": 1,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "none",
+        "run_id": 2,
+        "experiment_type": "baseline_solo",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-11T15:39:28",
+            "elapsed_seconds_total": 1.763,
+            "n_turns": 1,
+            "avg_seconds_per_turn": 1.763,
+            "per_turn_seconds": [
+                1.763
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Solo_Agent": 1
+            },
+            "turn_lengths_chars": [
+                2
+            ]
+        }
+    },
+    "input": "Frank T., had an ongoing dispute with his neighbor over a stretch of land and one day decided to shoot his neighbor in the body. Frank T. had no experience with guns, his hand slipped on the barrel of the gun, and the shot went wild. Nonetheless, the bullet bounced off a large boulder several feet away and hit the neighbor's body, causing significant injury. Did Frank T. intentionally shoot his neighbor in the body?",
+    "debate_transcript": [
+        "[Solo_Agent]: No"
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.8617,
+            "bleu": 0.1495,
+            "rouge_l": 0.5
+        },
+        "dynamics": null
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.8617,
+            "bleu": 0.1495,
+            "rouge_l": 0.5
+        },
+        "dynamics": null
+    }
+}

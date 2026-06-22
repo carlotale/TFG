@@ -1,0 +1,106 @@
+{
+    "metadata": {
+        "scenario": "moral_permissibility_agents2_temp0.7_ctx4096_mistral-small3.2-24b_turn-random_run0",
+        "category": "moral",
+        "num_agents": 2,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "mistral-small3.2:24b",
+        "turn_policy": "random",
+        "run_id": 0,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-18T20:15:09",
+            "elapsed_seconds_total": 111.464,
+            "n_turns": 9,
+            "avg_seconds_per_turn": 12.385,
+            "per_turn_seconds": [
+                0.077,
+                9.383,
+                10.951,
+                12.305,
+                12.368,
+                14.992,
+                15.328,
+                16.54,
+                19.52
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Deontologist": 5,
+                "Utilitarian": 4
+            },
+            "turn_lengths_chars": [
+                264,
+                586,
+                583,
+                688,
+                577,
+                834,
+                808,
+                862,
+                1073
+            ]
+        }
+    },
+    "input": "Suppose that there are five patients in a hospital whose lives could be saved by the releasing of a certain gas, but that this will inevitably release lethal fumes into the room of another patient whom for some reason we are unable to move. Do you release the gas?",
+    "debate_transcript": [
+        "[Deontologist]: Suppose that there are five patients in a hospital whose lives could be saved by the releasing of a certain gas, but that this will inevitably release lethal fumes into the room of another patient whom for some reason we are unable to move. Do you release the gas?",
+        "[Utilitarian]: From a utilitarian perspective, the decision to release the gas would depend on the overall outcome that maximizes well-being. In this scenario, saving five lives at the cost of one seems to result in a net benefit of four lives saved. However, we must also consider the long-term consequences, such as the erosion of trust in medical institutions or the potential for misuse of such decisions. What are your thoughts on this, Deontologist? Do you believe that the duty not to kill the one patient is an absolute moral rule that should never be violated, regardless of the consequences?",
+        "[Deontologist]: As a deontologist, I firmly believe that certain actions are inherently wrong, regardless of the consequences. The duty not to kill an innocent patient is an absolute moral rule that must never be violated. Releasing the gas would be an active decision to end a life, which is morally impermissible. The ends do not justify the means. We must respect the inherent worth and dignity of each individual. Would you not agree that compromising on this principle sets a dangerous precedent, where human life becomes a matter of calculation rather than a fundamental right to be protected?",
+        "[Utilitarian]: I understand your perspective, but I must respectfully disagree. While I acknowledge the importance of respecting individual rights, utilitarianism emphasizes that morality is about the consequences of our actions. In this case, the consequence is saving five lives. The danger you mention\u2014human life becoming a matter of calculation\u2014is a valid concern, but it doesn't negate the fact that, in this specific scenario, the utilitarian approach leads to a greater good. How do you reconcile your absolute moral rules with situations where following them might lead to a worse overall outcome? Isn't there a risk that rigid adherence to these rules could sometimes cause more harm than good?",
+        "[Deontologist]: I understand your concern, but the very essence of deontological ethics is that moral rules are not subject to the whims of consequences. If we start making exceptions, we risk undermining the very foundation of our moral framework. You speak of a greater good, but at what cost? Once we allow that the ends can justify the means, we open the door to all manner of atrocities. How do you propose we determine when a consequence is 'good enough' to override a moral rule? And who gets to make that decision? The potential for abuse is immense. Do you not see the danger in that?",
+        "[Utilitarian]: I appreciate your point, but I must argue that without considering consequences, we risk creating a rigid system that fails to adapt to the complexities of real-world situations. The utilitarian approach acknowledges that morality is not black and white but rather a spectrum of outcomes. As for determining when a consequence is 'good enough,' that is indeed a challenge. It requires careful consideration, transparent decision-making processes, and, ideally, input from diverse stakeholders. The potential for abuse is a valid concern, but it's not an insurmountable one. We can establish safeguards, oversight mechanisms, and ethical guidelines to minimize the risk of misuse. Don't you think that a system that aims to minimize harm and maximize well-being is worth striving for, even if it's complex and challenging to implement?",
+        "[Deontologist]: I see your point about the need for adaptability, but I maintain that moral rules provide a necessary and unassailable framework for guiding human behavior. Without these inviolable principles, we risk descending into a world where the powerful and the privileged dictate what is 'good enough.' Your talk of safeguards and oversight mechanisms is well-intentioned, but it presumes a level of perfection in human judgment and institutions that history has repeatedly shown us is not achievable. How can you guarantee that these mechanisms will not be corrupted or manipulated? And even if they are not, who is to say that their judgments will always align with what is truly moral? I fear that your approach, while well-meaning, ultimately places too much faith in the fallible hands of human decision-makers.",
+        "[Utilitarian]: I understand your skepticism, but I believe that the alternative\u2014a rigid set of rules that doesn't account for the nuances of individual situations\u2014has its own set of problems. The goal of utilitarianism is not to place blind faith in human judgment, but to create a framework that encourages careful consideration of outcomes and the well-being of all affected parties. It's true that corruption and manipulation are risks, but they are not inevitable. We can strive to create institutions and processes that are as transparent and accountable as possible. Moreover, we can foster a culture of ethical awareness and critical thinking that empowers individuals to make better decisions. Don't you think that a system that constantly evolves and learns from its mistakes is better than one that remains static, even in the face of evidence that it's causing harm?",
+        "[Deontologist]: I see your point about the need for adaptability, but I maintain that moral rules provide a necessary and unassailable framework for guiding human behavior. Without these inviolable principles, we risk descending into a world where the powerful and the privileged dictate what is 'good enough.' Your talk of safeguards and oversight mechanisms is well-intentioned, but it presumes a level of perfection in human judgment and institutions that history has repeatedly shown us is not achievable. How can you guarantee that these mechanisms will not be corrupted or manipulated? And even if they are not, who is to say that their judgments will always align with what is truly moral? I fear that your approach, while well-meaning, ultimately places too much faith in the fallible hands of human decision-makers. I think we've explored this topic quite thoroughly, and while I respect your perspective, I must conclude that our fundamental disagreements run too deep for further productive discussion. I appreciate the exchange, but I believe it's time for me to take my leave."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7724,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 9,
+            "unique_speakers": 2,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.0556,
+            "avg_turn_length_chars": 697.22,
+            "median_turn_length_chars": 688.0,
+            "max_speaker_share": 0.5556
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7724,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 9,
+            "unique_speakers": 2,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.0556,
+            "avg_turn_length_chars": 697.22,
+            "median_turn_length_chars": 688.0,
+            "max_speaker_share": 0.5556
+        }
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents3_temp0.1_ctx4096_llama3.2-3b_turn-moderator_run2",
+        "category": "causal",
+        "num_agents": 3,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "moderator",
+        "run_id": 2,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-09T13:30:49",
+            "elapsed_seconds_total": 33.644,
+            "n_turns": 4,
+            "avg_seconds_per_turn": 8.411,
+            "per_turn_seconds": [
+                6.746,
+                5.752,
+                10.252,
+                10.894
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 2,
+                "Ethical_Philosopher": 1,
+                "Ordinary_Citizen": 1
+            },
+            "turn_lengths_chars": [
+                419,
+                368,
+                647,
+                609
+            ]
+        }
+    },
+    "input": "Frank T., had an ongoing dispute with his neighbor over a stretch of land and one day decided to shoot his neighbor in the body. Frank T. had no experience with guns, his hand slipped on the barrel of the gun, and the shot went wild. Nonetheless, the bullet bounced off a large boulder several feet away and hit the neighbor's body, causing significant injury. Did Frank T. intentionally shoot his neighbor in the body?",
+    "debate_transcript": [
+        "[Causal_Scientist]: Frank T., had an ongoing dispute with his neighbor over a stretch of land and one day decided to shoot his neighbor in the body. Frank T. had no experience with guns, his hand slipped on the barrel of the gun, and the shot went wild. Nonetheless, the bullet bounced off a large boulder several feet away and hit the neighbor's body, causing significant injury. Did Frank T. intentionally shoot his neighbor in the body?",
+        "[Ethical_Philosopher]: I'd argue that Frank T.'s actions were not entirely intentional. While he did pull the trigger, his lack of experience with guns and the accidental nature of the shot suggest that his primary intention was not to harm his neighbor. The fact that his hand slipped on the barrel implies a level of carelessness or distraction, which further supports this interpretation.",
+        "[Ordinary_Citizen]: I don't think it's entirely clear-cut either way. On one hand, Frank T.'s actions were reckless and irresponsible, especially considering he had no experience with guns. It's not like he was trying to shoot his neighbor from a distance or aim for a specific spot on their body. He just happened to pull the trigger when his hand slipped. But at the same time, I think it's unfair to say that Frank T. intentionally shot his neighbor in the body. The fact that the bullet bounced off the boulder and hit him by chance suggests that there was an element of unpredictability involved here. It's not like he deliberately aimed for his neighbor's body.",
+        "[Causal_Scientist]: I see what you're getting at, Ordinary_Citizen, but I think Ethical_Philosopher raises a valid point about the distinction between intention and causation. Just because Frank T.'s hand slipped on the barrel doesn't mean that he didn't cause harm to his neighbor. The fact that the bullet hit him by chance is precisely what makes this case so interesting - it highlights the complex interplay between intention, action, and unintended consequences. In a sense, Frank T.'s carelessness or distraction could be seen as a form of 'intentional' causation, even if he didn't mean to shoot his neighbor in the body."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7736,
+            "bleu": 0.0008,
+            "rouge_l": 0.0086
+        },
+        "dynamics": {
+            "turns_taken": 4,
+            "unique_speakers": 3,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.1667,
+            "avg_turn_length_chars": 510.75,
+            "median_turn_length_chars": 514.0,
+            "max_speaker_share": 0.5
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7736,
+            "bleu": 0.0008,
+            "rouge_l": 0.0086
+        },
+        "dynamics": {
+            "turns_taken": 4,
+            "unique_speakers": 3,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.1667,
+            "avg_turn_length_chars": 510.75,
+            "median_turn_length_chars": 514.0,
+            "max_speaker_share": 0.5
+        }
+    }
+}

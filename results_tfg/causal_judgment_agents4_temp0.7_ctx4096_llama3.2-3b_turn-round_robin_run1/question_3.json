@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.7_ctx4096_llama3.2-3b_turn-round_robin_run1",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 1,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-09T18:57:09",
+            "elapsed_seconds_total": 29.929,
+            "n_turns": 5,
+            "avg_seconds_per_turn": 5.986,
+            "per_turn_seconds": [
+                0.116,
+                7.743,
+                6.999,
+                7.504,
+                7.567
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 2,
+                "Ethical_Philosopher": 1,
+                "Ordinary_Citizen": 1,
+                "Legal_Expert": 1
+            },
+            "turn_lengths_chars": [
+                528,
+                577,
+                424,
+                507,
+                558
+            ]
+        }
+    },
+    "input": "Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+    "debate_transcript": [
+        "[Causal_Scientist]: Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+        "[Ethical_Philosopher]: I'd say the situation is not as clear-cut as it seems. If we assume that Billy's presence alone caused the motion detector to trigger, we'd be attributing intent to a machine, which raises questions about its moral responsibility. On the other hand, if Suzy was also present at 9 am and her arrival simultaneously triggered the motion detector, then we might need to consider the collective action of both parties. It's possible that their simultaneous actions led to the detection, but it doesn't necessarily imply causation in the same way we'd attribute to human intentions.",
+        "[Ordinary_Citizen]: I think I'd still say Billy caused the motion detector to go off, even if Suzy was also present. To me, it seems like Billy's arrival alone is what triggered the motion detector - it wasn't like he somehow made the room appear and then Suzy showed up at 9 am. If Suzy arrived just a second or two after Billy, I'd think she had to have caused the detection, but since they both got there simultaneously, that's not the case.",
+        "[Legal_Expert]: I understand where you're coming from, Ordinary_Citizen, but I'm inclined to disagree with your interpretation. If the motion detector was triggered solely by Billy's presence, it raises questions about the concept of 'cause' in this scenario. What if Suzy's arrival was merely a coincidence? Perhaps she arrived at exactly 9 am for her own reasons, unrelated to Billy's presence. In that case, attributing causation to Billy would be unfair, as his actions wouldn't have led to Suzy's simultaneous arrival.",
+        "[Causal_Scientist]: That's an interesting point about the concept of 'cause' and coincidence, Legal_Expert. However, I'd argue that the motion detector's trigger mechanism is more likely to be deterministic than probabilistic. In other words, it's probably designed to detect multiple people at once, rather than being a device that can produce random or coincidental effects. But what if we assume that Billy and Suzy's simultaneous arrival was indeed a coincidence? Would it change the fact that their combined presence led to the motion detector going off in the first place?"
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "No",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7744,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 518.8,
+            "median_turn_length_chars": 528.0,
+            "max_speaker_share": 0.4
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7744,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 518.8,
+            "median_turn_length_chars": 528.0,
+            "max_speaker_share": 0.4
+        }
+    }
+}

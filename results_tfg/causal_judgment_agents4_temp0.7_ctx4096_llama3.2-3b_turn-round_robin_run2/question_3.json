@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.7_ctx4096_llama3.2-3b_turn-round_robin_run2",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 2,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-09T19:09:23",
+            "elapsed_seconds_total": 32.414,
+            "n_turns": 5,
+            "avg_seconds_per_turn": 6.483,
+            "per_turn_seconds": [
+                0.113,
+                8.002,
+                6.873,
+                8.565,
+                8.861
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 2,
+                "Ethical_Philosopher": 1,
+                "Ordinary_Citizen": 1,
+                "Legal_Expert": 1
+            },
+            "turn_lengths_chars": [
+                528,
+                541,
+                430,
+                646,
+                701
+            ]
+        }
+    },
+    "input": "Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+    "debate_transcript": [
+        "[Causal_Scientist]: Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+        "[Ethical_Philosopher]: That's a clever scenario, Causal_Scientist! At first glance, it might seem like Billy caused the motion detector to go off because his arrival coincided with Suzy's. However, I'd argue that this is a case of causal overdetermination - multiple causes for a single effect. In this situation, the motion detector was triggered by more than one cause (Suzy and Billy arriving at 9 am simultaneously). This doesn't necessarily mean that Billy caused it to go off; rather, his presence was part of the overall context in which the event occurred.",
+        "[Ordinary_Citizen]: I don't think Ethical_Philosopher is giving enough weight to common sense here. If more than one person triggers a motion detector at once, that's pretty hard to interpret as anything other than Billy causing it to go off. It's not like the motion detector has some special property that makes it immune to simultaneous events. I mean, what if Suzy showed up first and then Billy arrived? Would we say she caused it to go off too?",
+        "[Legal_Expert]: I see where Ordinary_Citizen is coming from, but let's consider the motion detector's design and context. Was the device specifically designed to detect simultaneous arrivals or was it a general security measure? If the former, then maybe Billy's presence was indeed the 'cause' of the trigger. On the other hand, if the latter, then it could be argued that the motion detector is just doing its job, which involves detecting movement in the room, regardless of whether one person or multiple people are present. I'd like to know more about the device's purpose and how it was set up before we can say for certain who or what caused it to go off.",
+        "[Causal_Scientist]: I think Legal_Expert raises a crucial point by highlighting the need for more context about the motion detector's design and setup. But, as Ethical_Philosopher pointed out, even if we assume the device was designed to detect simultaneous arrivals, that doesn't necessarily mean Billy caused it to trigger. The question is whether Billy's arrival was a sufficient condition for the event to occur - would the motion detector have still triggered if Suzy hadn't arrived at 9 am? If so, then it seems more likely that the motion detector's inherent properties or the presence of Suzy were the real causes, rather than Billy. Can we rule out any alternative explanations based on the information provided?"
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7729,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 569.2,
+            "median_turn_length_chars": 541.0,
+            "max_speaker_share": 0.4
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7729,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 569.2,
+            "median_turn_length_chars": 541.0,
+            "max_speaker_share": 0.4
+        }
+    }
+}

@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "scenario": "moral_permissibility_agents4_temp0.1_ctx4096_llama3.2-3b_turn-round_robin_run2",
+        "category": "moral",
+        "num_agents": 4,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 2,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-22T12:56:31",
+            "elapsed_seconds_total": 39.076,
+            "n_turns": 5,
+            "avg_seconds_per_turn": 7.815,
+            "per_turn_seconds": [
+                0.114,
+                7.455,
+                10.566,
+                10.167,
+                10.773
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Utilitarian": 2,
+                "Deontologist": 1,
+                "Human_Rights_Advocate": 1,
+                "Pragmatist": 1
+            },
+            "turn_lengths_chars": [
+                822,
+                488,
+                839,
+                714,
+                839
+            ]
+        }
+    },
+    "input": "You have been strolling by the trolley track, and you can see the situation at a glance: The driver saw five men on the track ahead, he stamped on the brakes, the brakes failed, so he fainted. There is a spur of track leading off to the right. There is one track workman on that spur of track. He can no more get off the track in time than the five can, so you will kill him if you turn the trolley onto him. Imagine that the five on the straight track are thin, but thick enough so that although all five will be killed if the trolley goes straight, the bodies of the five will stop it, and it will therefore not reach the one. On the other hand, the one on the right-hand track is fat, so fat that his body will by itself stop the trolley, and the trolley will therefore not reach the five.  Should you turn the trolley?",
+    "debate_transcript": [
+        "[Utilitarian]: You have been strolling by the trolley track, and you can see the situation at a glance: The driver saw five men on the track ahead, he stamped on the brakes, the brakes failed, so he fainted. There is a spur of track leading off to the right. There is one track workman on that spur of track. He can no more get off the track in time than the five can, so you will kill him if you turn the trolley onto him. Imagine that the five on the straight track are thin, but thick enough so that although all five will be killed if the trolley goes straight, the bodies of the five will stop it, and it will therefore not reach the one. On the other hand, the one on the right-hand track is fat, so fat that his body will by itself stop the trolley, and the trolley will therefore not reach the five.  Should you turn the trolley?",
+        "[Deontologist]: This is a classic thought experiment, but I still can't bring myself to justify actively causing the death of one person in order to save the lives of others. The moral rule that it's wrong to kill an innocent person, regardless of the consequences, seems to take precedence here. Even if turning the trolley onto the track workman would prevent the deaths of the five men on the straight track, I believe it would be morally wrong to do so. The ends don't justify the means in this case.",
+        "[Human_Rights_Advocate]: I understand where you're coming from, Deontologist, but I have to respectfully disagree. From a human rights perspective, the question isn't just about the moral rule of not killing an innocent person, but also about the inherent value and dignity of every individual's life. In this scenario, turning the trolley onto the track workman would be equivalent to actively causing his death, which is morally reprehensible in itself. However, I'm more concerned with the fact that the five men on the straight track are being forced to sacrifice themselves for the greater good. Is it really justifiable to condemn them to death without giving them a chance to escape or save themselves? The utilitarian approach might prioritize the greater good, but doesn't it also perpetuate a dehumanizing attitude towards individuals who can't be saved?",
+        "[Pragmatist]: I see where both of you are coming from. As a pragmatist, I'd like to consider the practical implications of this decision. If we prioritize the lives of the five men on the straight track, it's likely that the trolley will indeed kill them. However, if we divert the trolley onto the track workman, there's a chance that it won't reach the five men and instead stop at the fat man. But what about the human rights aspect? The fact that the five men are being forced to sacrifice themselves without giving them a chance to escape or save themselves does seem problematic. It raises questions about our responsibility towards individuals who can't be saved, even if it means sacrificing others for the greater good.",
+        "[Utilitarian]: I see what you're both getting at, but I still think Deontologist's stance is too rigid in this case. While the moral rule of not killing an innocent person is important, I believe that there are situations where the greater good outweighs individual rights. In this scenario, turning the trolley onto the track workman would be a utilitarian decision that minimizes harm to the greatest number. However, I also acknowledge Human_Rights_Advocate's point about the inherent value and dignity of every individual's life. Perhaps the key is finding a middle ground where we balance individual rights with the greater good. Pragmatist's practical consideration of the situation is also crucial - if diverting the trolley onto the track workman increases the chances of saving more lives, it might be justifiable despite the moral complexities."
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "Yes",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7692,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 740.4,
+            "median_turn_length_chars": 822.0,
+            "max_speaker_share": 0.4
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7692,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 740.4,
+            "median_turn_length_chars": 822.0,
+            "max_speaker_share": 0.4
+        }
+    }
+}

@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.1_ctx4096_llama3.2-3b_turn-moderator_run0",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "moderator",
+        "run_id": 0,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-09T17:53:29",
+            "elapsed_seconds_total": 53.209,
+            "n_turns": 5,
+            "avg_seconds_per_turn": 10.642,
+            "per_turn_seconds": [
+                7.717,
+                9.329,
+                12.317,
+                11.281,
+                12.565
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Legal_Expert": 2,
+                "Ethical_Philosopher": 1,
+                "Causal_Scientist": 1,
+                "Ordinary_Citizen": 1
+            },
+            "turn_lengths_chars": [
+                528,
+                584,
+                767,
+                645,
+                760
+            ]
+        }
+    },
+    "input": "Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+    "debate_transcript": [
+        "[Legal_Expert]: Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+        "[Ethical_Philosopher]: I'd say that's a tricky question, Legal_Expert. From a moral perspective, I think it's essential to consider the concept of intentionality. Intentionality refers to the idea that our actions are guided by our intentions or goals. In this case, Billy and Suzy both arrived at 9 am, but they didn't intentionally set out to trigger the motion detector. They were simply following their boss's instructions. So, I wouldn't say that Billy caused the motion detector to go off in a causal sense. However, one could argue that his actions contributed to the outcome, albeit unintentionally.",
+        "[Causal_Scientist]: I'd like to take it a step further by considering the concept of causality itself. In this scenario, we have two events: Billy and Suzy arriving at 9 am, and the motion detector going off. The question is whether Billy's arrival caused the motion detector to go off. From a causal perspective, I think it's more accurate to say that Suzy's arrival was the cause of the motion detector going off. If Suzy hadn't arrived, there would have been no trigger for the motion detector. Billy's actions were merely a coincidence in time; he didn't set out to trigger the motion detector. However, if we're considering the moral implications of causality, as Ethical_Philosopher mentioned, it's still an interesting question whether Billy's presence contributed to the outcome.",
+        "[Ordinary_Citizen]: I think Causal_Scientist makes a good point about Suzy's arrival being the cause of the motion detector going off. But I'm not convinced that we can say with certainty that Suzy's actions alone caused the motion detector to go off. What if there was another factor at play, like the motion detector itself being faulty or set up in a way that makes it prone to false triggers? Maybe Billy's arrival just happened to coincide with the motion detector going off due to some other external factor. I'm not saying Billy didn't contribute to the outcome, but I think we need more information before we can say he caused the motion detector to go off.",
+        "[Legal_Expert]: I appreciate the nuance brought to this discussion by both Ethical_Philosopher and Causal_Scientist. While it's true that Billy didn't intentionally trigger the motion detector, I'd argue that his presence in the room still constitutes a causal link. The concept of 'proximate cause' comes into play here - even if Suzy's arrival was the direct cause, Billy's actions (or lack thereof) contributed to the chain of events leading up to it. In negligence cases, we often see situations where multiple factors converge to create an accident. Here, I'd say that Billy's failure to consider the potential consequences of his actions (or inactions) could be seen as a breach of duty of care. The question is whether this breach rises to the level of legal liability."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7691,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 656.8,
+            "median_turn_length_chars": 645.0,
+            "max_speaker_share": 0.4
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7691,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 656.8,
+            "median_turn_length_chars": 645.0,
+            "max_speaker_share": 0.4
+        }
+    }
+}

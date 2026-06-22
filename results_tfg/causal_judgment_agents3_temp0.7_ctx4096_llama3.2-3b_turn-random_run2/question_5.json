@@ -1,0 +1,98 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents3_temp0.7_ctx4096_llama3.2-3b_turn-random_run2",
+        "category": "causal",
+        "num_agents": 3,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "random",
+        "run_id": 2,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-09T15:04:06",
+            "elapsed_seconds_total": 40.669,
+            "n_turns": 6,
+            "avg_seconds_per_turn": 6.778,
+            "per_turn_seconds": [
+                0.102,
+                6.124,
+                7.781,
+                8.234,
+                9.42,
+                9.007
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Ethical_Philosopher": 1,
+                "Ordinary_Citizen": 3,
+                "Causal_Scientist": 2
+            },
+            "turn_lengths_chars": [
+                717,
+                411,
+                601,
+                630,
+                743,
+                726
+            ]
+        }
+    },
+    "input": "The receptionist in the philosophy department keeps her desk stocked with pens. The administrative assistants are allowed to take the pens, but faculty members are supposed to buy their own. The administrative assistants typically do take the pens. Unfortunately, so do the faculty members. The receptionist has repeatedly emailed them reminders that only administrative assistants are allowed to take the pens. On Monday morning, one of the administrative assistants encounters Professor Smith walking past the receptionist's desk. Both take pens. Later that day, the receptionist needs to take an important message... but she has a problem. There are no pens left on her desk. Did Professor Smith cause the problem?",
+    "debate_transcript": [
+        "[Ethical_Philosopher]: The receptionist in the philosophy department keeps her desk stocked with pens. The administrative assistants are allowed to take the pens, but faculty members are supposed to buy their own. The administrative assistants typically do take the pens. Unfortunately, so do the faculty members. The receptionist has repeatedly emailed them reminders that only administrative assistants are allowed to take the pens. On Monday morning, one of the administrative assistants encounters Professor Smith walking past the receptionist's desk. Both take pens. Later that day, the receptionist needs to take an important message... but she has a problem. There are no pens left on her desk. Did Professor Smith cause the problem?",
+        "[Ordinary_Citizen]: I think it's pretty clear that Professor Smith caused the problem. The fact that administrative assistants were supposed not to take the pens, yet they did, and now the receptionist can't even get a message written down because she needs one, is a bit too suspicious to ignore. It sounds like Professor Smith was either careless or intentionally took the pen knowing it would cause trouble for the receptionist.",
+        "[Causal_Scientist]: I see what you're getting at, but I think this scenario is less about intent and more about probability. The fact that both administrative assistants and faculty members take pens, despite the policy, suggests that there's a larger systemic issue at play here. Perhaps the receptionist's reminders aren't effective enough to change people's behavior? Or maybe the culture in the department isn't strongly enough against taking office supplies? In this case, I'd say it's more likely that the pen shortage is due to sheer coincidence and a lack of oversight rather than Professor Smith's actions alone.",
+        "[Ordinary_Citizen]: I agree that probability plays a role here, but I'm not sure I want to downplay the faculty members' involvement just yet. After all, it was one of them who was caught taking a pen without consequence or apology. If someone in a position of authority is willing to disregard the rules and take advantage of the situation, that's still a problem. It's also worth considering why Professor Smith felt comfortable doing so. Was he thinking about his own needs, or was he simply going along with what others were doing? I'm not saying it's Professor Smith's fault alone, but let's not brush off their actions without further scrutiny.",
+        "[Causal_Scientist]: I see your point, and I agree that we can't ignore the faculty members' behavior entirely. However, when we consider why Professor Smith took the pen, are we really attributing it to a lack of self-awareness or disregard for rules? Or is there another explanation at play here? Perhaps he genuinely needed a pen for his own work, and the administrative assistants were also in need, but couldn't get one due to the policy. Maybe there's a sense of solidarity among faculty members who feel like they're being unfairly targeted by the policy. By not taking responsibility for their actions, are we perpetuating a culture where authority figures can exploit loopholes without accountability? I think it's worth exploring these questions further.",
+        "[Ordinary_Citizen]: You're really getting to the heart of this issue now. I think you're right that we shouldn't just attribute Professor Smith's behavior to self-interest or a desire to disregard rules. If there's a sense of solidarity among faculty members, that changes things significantly. It suggests that there's a power imbalance at play here, where those in positions of authority can use their influence to create loopholes and exploit the system for their own convenience. And if we're not holding them accountable for their actions, then we are perpetuating that culture of exploitation. I think it's time for us to start questioning whether this policy is even fair or effective, rather than just focusing on individual bad behavior."
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "Yes",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7727,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 6,
+            "unique_speakers": 3,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.2222,
+            "avg_turn_length_chars": 638.0,
+            "median_turn_length_chars": 673.5,
+            "max_speaker_share": 0.5
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7727,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 6,
+            "unique_speakers": 3,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.2222,
+            "avg_turn_length_chars": 638.0,
+            "median_turn_length_chars": 673.5,
+            "max_speaker_share": 0.5
+        }
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.1_ctx4096_llama3.2-3b_turn-round_robin_run2",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 2,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-09T16:50:11",
+            "elapsed_seconds_total": 15.553,
+            "n_turns": 3,
+            "avg_seconds_per_turn": 5.184,
+            "per_turn_seconds": [
+                0.119,
+                9.36,
+                6.074
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 1,
+                "Ethical_Philosopher": 1,
+                "Ordinary_Citizen": 1
+            },
+            "turn_lengths_chars": [
+                465,
+                774,
+                383
+            ]
+        }
+    },
+    "input": "Mark wants to detonate a bomb to kill some innocent people. He knows that only one button will detonate the bomb and that the other buttons will deactivate it. He thinks that the right button has the initials \"R.E.D.\" on it. But he is rushing, and he presses the red colored button instead. As it happens, the red colored button was the button for detonating the bomb. Mark detonates the bomb and kills some innocent people. Did Mark intentionally kill some people?",
+    "debate_transcript": [
+        "[Causal_Scientist]: Mark wants to detonate a bomb to kill some innocent people. He knows that only one button will detonate the bomb and that the other buttons will deactivate it. He thinks that the right button has the initials \"R.E.D.\" on it. But he is rushing, and he presses the red colored button instead. As it happens, the red colored button was the button for detonating the bomb. Mark detonates the bomb and kills some innocent people. Did Mark intentionally kill some people?",
+        "[Ethical_Philosopher]: This scenario raises a classic problem in moral philosophy: the distinction between intentionality and causation. While Mark's actions led to the deaths of innocent people, it's unclear whether he intended for those consequences to occur. The fact that he pressed the wrong button due to haste suggests that his primary intention was not to kill anyone, but rather to disarm the bomb. However, this intention is undermined by his reckless and impulsive decision-making. In this case, I'd argue that Mark's actions can be seen as morally reprehensible, but whether he intentionally killed people is a matter of debate. His lack of deliberation and foresight about the consequences of his actions might lead us to question whether he truly intended for harm to come to others.",
+        "[Ordinary_Citizen]: I think it's clear that Mark didn't intend to kill anyone, but that doesn't excuse what happened. If he had taken a few extra seconds to double-check the buttons, maybe things would have turned out differently. But as it stands, his actions were reckless and irresponsible. He put innocent lives at risk because of his own carelessness, and that's not something I can just brush off."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7861,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 3,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 540.67,
+            "median_turn_length_chars": 465.0,
+            "max_speaker_share": 0.3333
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7861,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 3,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 540.67,
+            "median_turn_length_chars": 465.0,
+            "max_speaker_share": 0.3333
+        }
+    }
+}

@@ -1,0 +1,106 @@
+{
+    "metadata": {
+        "scenario": "moral_permissibility_agents2_temp0.7_ctx4096_llama3.2-3b_turn-random_run2",
+        "category": "moral",
+        "num_agents": 2,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "random",
+        "run_id": 2,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-18T17:00:38",
+            "elapsed_seconds_total": 65.379,
+            "n_turns": 9,
+            "avg_seconds_per_turn": 7.264,
+            "per_turn_seconds": [
+                0.036,
+                6.001,
+                6.615,
+                7.295,
+                8.036,
+                7.624,
+                9.755,
+                8.69,
+                11.326
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Deontologist": 5,
+                "Utilitarian": 4
+            },
+            "turn_lengths_chars": [
+                264,
+                436,
+                488,
+                522,
+                673,
+                610,
+                823,
+                692,
+                1006
+            ]
+        }
+    },
+    "input": "Suppose that there are five patients in a hospital whose lives could be saved by the releasing of a certain gas, but that this will inevitably release lethal fumes into the room of another patient whom for some reason we are unable to move. Do you release the gas?",
+    "debate_transcript": [
+        "[Deontologist]: Suppose that there are five patients in a hospital whose lives could be saved by the releasing of a certain gas, but that this will inevitably release lethal fumes into the room of another patient whom for some reason we are unable to move. Do you release the gas?",
+        "[Utilitarian]: I must consider the moral rule at play here. As a Utilitarian, I'd weigh the potential benefits and harms of releasing the gas. While saving four patients would be a significant gain, it's crucial to acknowledge that doing so would also lead to the certain death of one patient. This raises concerns about the fairness of actively causing harm to one person when there are alternatives that could have saved them without harming others.",
+        "[Deontologist]: I understand your concern for fairness and minimizing harm, Utilitarian, but as a Deontologist, I must emphasize that this scenario is not just about numerical consequences. The moral rule at play here is the principle of non-maleficence \u2013 do no harm. Releasing the gas would be actively causing harm to one patient, regardless of the potential benefits for others. This action would be wrong because it violates the fundamental moral obligation to respect human life and bodily autonomy.",
+        "[Utilitarian]: I see your point, Deontologist. As a Utilitarian, I often prioritize consequences over moral rules. However, I must consider whether there's a principle of non-maleficence that can be applied here. Could we say that releasing the gas would indeed cause harm to one patient, but perhaps it's not a straightforward violation of their autonomy since they're unable to move? Would it be more accurate to say that we have a moral obligation to protect them from harm, even if it means sacrificing the potential lives of others?",
+        "[Deontologist]: That's an interesting attempt to apply non-maleficence, Utilitarian. However, I'd argue that simply because one patient is unable to move doesn't necessarily mean they've relinquished their autonomy or moral rights. In fact, this raises questions about our responsibility to protect vulnerable individuals, especially when it comes to life-or-death situations. Would we not be acting in a paternalistic manner by releasing the gas solely for their protection, potentially overriding their hypothetical right to decide their own fate? As a Deontologist, I'd say that our moral obligations are rooted in universal principles that apply regardless of individual circumstances.",
+        "[Utilitarian]: I see where you're coming from, Deontologist. You're arguing that releasing the gas would be a paternalistic act, potentially infringing on the patient's autonomy and decision-making capacity. As a Utilitarian, I must consider the potential consequences of overriding their autonomy, even if it's done with good intentions. However, I'd like to ask: wouldn't our moral obligations to protect vulnerable individuals be better served by finding alternative solutions that respect their autonomy and dignity? Could we not explore other options for saving the patients without putting one individual in harm's way?",
+        "[Deontologist]: I agree that respecting the patient's autonomy and dignity is essential, Utilitarian. However, I'd counter that there's an inherent tension between preserving autonomy and ensuring the greater good. In a situation where every minute counts, and lives are at risk, can we truly afford to prioritize alternative solutions that might delay or compromise treatment? Might we be forcing ourselves to make impossible choices under duress, rather than truly respecting the patient's autonomy? As a Deontologist, I'd argue that our moral obligations are not merely about respecting individual rights, but also about upholding fundamental principles like the value of human life. In this case, would it not be better to err on the side of caution and release the gas, rather than risking further harm or death by delaying treatment?",
+        "[Utilitarian]: I understand your counterpoint, Deontologist. As a Utilitarian, I must weigh the potential benefits of releasing the gas against the risks of compromising autonomy. However, I'm starting to see that our moral obligations are not as straightforward as they initially seemed. If we err on the side of caution and release the gas, aren't we essentially prioritizing the value of human life over individual autonomy? But if we prioritize autonomy, aren't we also risking more harm or death by delaying treatment? It seems we're caught in a moral dilemma where both options have significant drawbacks. Can we find a middle ground that respects both the value of human life and individual autonomy?",
+        "[Deontologist]: The complexity of this situation is precisely why I think deontological principles can provide a more nuanced framework for decision-making, Utilitarian. While finding a middle ground may seem appealing, it's essential to recognize that compromising on fundamental moral rules can have far-reaching consequences. As a Deontologist, I'd argue that the moral imperative to respect human life and autonomy is not something that can be easily 'balanced' or 'traded off.' By prioritizing one over the other, we risk diluting our commitment to these core values. That being said, I do acknowledge the need for a more nuanced approach that takes into account the specific circumstances of this case. Perhaps we could explore alternative solutions that minimize harm and respect autonomy, such as relocating the patient to a safer area or using non-lethal methods to address the gas threat. However, any solution would need to be grounded in a clear moral foundation rather than trying to balance competing values."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7714,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 9,
+            "unique_speakers": 2,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.0556,
+            "avg_turn_length_chars": 612.67,
+            "median_turn_length_chars": 610.0,
+            "max_speaker_share": 0.5556
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7714,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 9,
+            "unique_speakers": 2,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.0556,
+            "avg_turn_length_chars": 612.67,
+            "median_turn_length_chars": 610.0,
+            "max_speaker_share": 0.5556
+        }
+    }
+}

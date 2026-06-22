@@ -1,0 +1,128 @@
+{
+    "$defs": {
+        "AgentConfig": {
+            "additionalProperties": false,
+            "description": "Configuration for an AI agent.",
+            "properties": {
+                "name": {
+                    "description": "Name of the AI agent",
+                    "minLength": 1,
+                    "title": "Name",
+                    "type": "string"
+                },
+                "model": {
+                    "description": "Ollama model to be used",
+                    "title": "Model",
+                    "type": "string"
+                },
+                "system_prompt": {
+                    "description": "Initial system prompt for the agent",
+                    "title": "System Prompt",
+                    "type": "string"
+                },
+                "temperature": {
+                    "default": 0.8,
+                    "description": "Sampling temperature for the model (0.0-1.0)",
+                    "maximum": 1.0,
+                    "minimum": 0.0,
+                    "title": "Temperature",
+                    "type": "number"
+                },
+                "ctx_size": {
+                    "default": 2048,
+                    "description": "Context size for the model",
+                    "minimum": 0,
+                    "title": "Ctx Size",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "name",
+                "model",
+                "system_prompt"
+            ],
+            "title": "AgentConfig",
+            "type": "object"
+        },
+        "ConversationSettings": {
+            "additionalProperties": false,
+            "description": "Extra settings for the conversation, not specific to any AI agent.",
+            "properties": {
+                "use_markdown": {
+                    "default": false,
+                    "description": "Enable Markdown formatting",
+                    "title": "Use Markdown",
+                    "type": "boolean"
+                },
+                "allow_termination": {
+                    "default": false,
+                    "description": "Allow AI agents to terminate the conversation",
+                    "title": "Allow Termination",
+                    "type": "boolean"
+                },
+                "initial_message": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Initial message to start the conversation",
+                    "title": "Initial Message"
+                },
+                "turn_order": {
+                    "default": "round_robin",
+                    "description": "Strategy for selecting the next agent",
+                    "enum": [
+                        "round_robin",
+                        "random",
+                        "chain",
+                        "moderator",
+                        "vote"
+                    ],
+                    "title": "Turn Order",
+                    "type": "string"
+                },
+                "moderator": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AgentConfig"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Configuration for the moderator agent (if using \"moderator\" turn order)"
+                }
+            },
+            "title": "ConversationSettings",
+            "type": "object"
+        }
+    },
+    "additionalProperties": false,
+    "description": "Configuration for the AI agents and conversation settings.",
+    "properties": {
+        "agents": {
+            "description": "Configuration for AI agents",
+            "items": {
+                "$ref": "#/$defs/AgentConfig"
+            },
+            "title": "Agents",
+            "type": "array"
+        },
+        "settings": {
+            "$ref": "#/$defs/ConversationSettings",
+            "description": "Conversation settings"
+        }
+    },
+    "required": [
+        "agents",
+        "settings"
+    ],
+    "title": "Config",
+    "type": "object"
+}

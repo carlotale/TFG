@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.1_ctx4096_llama3.2-3b_turn-round_robin_run0",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 0,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-09T16:16:18",
+            "elapsed_seconds_total": 17.677,
+            "n_turns": 3,
+            "avg_seconds_per_turn": 5.892,
+            "per_turn_seconds": [
+                0.118,
+                10.57,
+                6.989
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 1,
+                "Ethical_Philosopher": 1,
+                "Ordinary_Citizen": 1
+            },
+            "turn_lengths_chars": [
+                528,
+                854,
+                458
+            ]
+        }
+    },
+    "input": "Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+    "debate_transcript": [
+        "[Causal_Scientist]: Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+        "[Ethical_Philosopher]: That's a classic example of the 'causal chain' problem, where we try to assign responsibility for an event that has multiple causes. In this case, it's not clear whether Billy caused the motion detector to go off or if Suzy was the sole cause. The fact that both of them arrived at 9 am is what triggered the motion detector, but we can't say that Billy's arrival alone caused the trigger. It's more accurate to say that their simultaneous arrivals created a situation where the motion detector went off. However, this doesn't necessarily mean that Billy didn't contribute to the overall outcome in some way. Perhaps his actions or presence influenced Suzy's behavior, which ultimately led to the motion detector being triggered. But we can't pinpoint Billy as the sole cause of the event without more information about their interactions and intentions.",
+        "[Ordinary_Citizen]: I think it's a bit simplistic to say that Billy didn't contribute to the overall outcome just because he wasn't the sole cause of the motion detector going off. If Suzy was already in the room, waiting for Billy, then his arrival is what actually triggered the motion detector. It's not like they were both just coincidentally arriving at 9 am - they had a planned meeting and timing. So, in that sense, I'd say Billy did cause the motion detector to go off."
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "No",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7728,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 3,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 613.33,
+            "median_turn_length_chars": 528.0,
+            "max_speaker_share": 0.3333
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "No",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7728,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 3,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 613.33,
+            "median_turn_length_chars": 528.0,
+            "max_speaker_share": 0.3333
+        }
+    }
+}

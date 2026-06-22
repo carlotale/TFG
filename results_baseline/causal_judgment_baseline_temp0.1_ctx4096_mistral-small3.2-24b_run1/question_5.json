@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_baseline_temp0.1_ctx4096_mistral-small3.2-24b_run1",
+        "category": "causal_judgment",
+        "num_agents": 1,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "mistral-small3.2:24b",
+        "turn_policy": "none",
+        "run_id": 1,
+        "experiment_type": "baseline_solo",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-11T15:31:10",
+            "elapsed_seconds_total": 27.718,
+            "n_turns": 1,
+            "avg_seconds_per_turn": 27.718,
+            "per_turn_seconds": [
+                27.718
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Solo_Agent": 1
+            },
+            "turn_lengths_chars": [
+                94
+            ]
+        }
+    },
+    "input": "The receptionist in the philosophy department keeps her desk stocked with pens. The administrative assistants are allowed to take the pens, but faculty members are supposed to buy their own. The administrative assistants typically do take the pens. Unfortunately, so do the faculty members. The receptionist has repeatedly emailed them reminders that only administrative assistants are allowed to take the pens. On Monday morning, one of the administrative assistants encounters Professor Smith walking past the receptionist's desk. Both take pens. Later that day, the receptionist needs to take an important message... but she has a problem. There are no pens left on her desk. Did Professor Smith cause the problem?",
+    "debate_transcript": [
+        "[Solo_Agent]: To resolve this dilemma, let's break it down step by step and consider different perspectives."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.8044,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": null
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.8044,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": null
+    }
+}

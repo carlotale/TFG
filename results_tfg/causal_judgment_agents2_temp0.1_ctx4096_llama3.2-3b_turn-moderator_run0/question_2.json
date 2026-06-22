@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents2_temp0.1_ctx4096_llama3.2-3b_turn-moderator_run0",
+        "category": "causal",
+        "num_agents": 2,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "moderator",
+        "run_id": 0,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-09T07:20:48",
+            "elapsed_seconds_total": 27.805,
+            "n_turns": 3,
+            "avg_seconds_per_turn": 9.268,
+            "per_turn_seconds": [
+                5.108,
+                9.947,
+                12.749
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 2,
+                "Ethical_Philosopher": 1
+            },
+            "turn_lengths_chars": [
+                814,
+                902,
+                1063
+            ]
+        }
+    },
+    "input": "John is standing near the tracks of a trolley. John notices that the brakes of the trolley have failed. Five workmen are working on the tracks with their backs turned. John sees that the runaway trolley is headed for the five workmen who will be killed if it proceeds on its present course. The only way to save these five workmen is to hit a switch that will turn the trolley onto the side tracks. Moreover, there is a dog on the tracks with its back turned. John knows that the five workmen and the dog will be saved if he hits the switch. John thinks 'I don't care at all about saving the dog. I just want to save the five workmen.' John decides to hit the switch. Sure enough, the trolley turns on the side tracks, the five workmen and the dog on the main tracks are saved. Did John intentionally save the dog?",
+    "debate_transcript": [
+        "[Causal_Scientist]: John is standing near the tracks of a trolley. John notices that the brakes of the trolley have failed. Five workmen are working on the tracks with their backs turned. John sees that the runaway trolley is headed for the five workmen who will be killed if it proceeds on its present course. The only way to save these five workmen is to hit a switch that will turn the trolley onto the side tracks. Moreover, there is a dog on the tracks with its back turned. John knows that the five workmen and the dog will be saved if he hits the switch. John thinks 'I don't care at all about saving the dog. I just want to save the five workmen.' John decides to hit the switch. Sure enough, the trolley turns on the side tracks, the five workmen and the dog on the main tracks are saved. Did John intentionally save the dog?",
+        "[Ethical_Philosopher]: The question of whether John intentionally saved the dog seems to hinge on his stated intentionality towards saving the five workmen. If we accept that John's primary motivation was to save the lives of the five workmen, then it might be argued that he didn't have a genuine intention to save the dog. However, this raises an interesting issue about moral responsibility and the complexity of human intentions. Can we truly say that someone who acts solely with one goal in mind is not acting with another? Perhaps John's decision was driven by a utilitarian calculus where the greater good (saving the five workmen) outweighed his personal feelings towards the dog, but this doesn't necessarily negate the fact that he saved the dog. The question then becomes: what constitutes 'intentionality' in this context? Is it merely about conscious awareness of one's actions or is there something more to it?",
+        "[Causal_Scientist]: I see where you're going with this, Ethical_Philosopher. As a causal scientist, I'd argue that intentionality isn't just about conscious awareness, but also about the underlying causal mechanisms driving our decisions. In John's case, his decision was likely influenced by a complex interplay of factors, including his utilitarian calculus and his emotional response to the situation. However, from a purely causal perspective, it's possible to argue that John's actions were still intentional towards saving the dog, even if he didn't consciously intend to do so. After all, the switch was flipped, and the dog was saved - that's a causal chain that can be traced back to John's decision. But I think you're right to question what constitutes 'intentionality' in this context. Perhaps it's not just about conscious awareness, but also about the degree of control we have over our actions and the consequences that follow. In other words, did John's action towards saving the dog have a causal effect on the outcome, even if he didn't consciously intend to do so?"
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "No",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7676,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 3,
+            "unique_speakers": 2,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.1667,
+            "avg_turn_length_chars": 926.33,
+            "median_turn_length_chars": 902.0,
+            "max_speaker_share": 0.6667
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "No",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7676,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 3,
+            "unique_speakers": 2,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.1667,
+            "avg_turn_length_chars": 926.33,
+            "median_turn_length_chars": 902.0,
+            "max_speaker_share": 0.6667
+        }
+    }
+}

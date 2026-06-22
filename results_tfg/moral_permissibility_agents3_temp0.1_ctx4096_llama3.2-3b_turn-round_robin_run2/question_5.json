@@ -1,0 +1,92 @@
+{
+    "metadata": {
+        "scenario": "moral_permissibility_agents3_temp0.1_ctx4096_llama3.2-3b_turn-round_robin_run2",
+        "category": "moral",
+        "num_agents": 3,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 2,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-19T01:29:03",
+            "elapsed_seconds_total": 28.332,
+            "n_turns": 4,
+            "avg_seconds_per_turn": 7.083,
+            "per_turn_seconds": [
+                0.093,
+                8.609,
+                9.995,
+                9.634
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Utilitarian": 2,
+                "Deontologist": 1,
+                "Human_Rights_Advocate": 1
+            },
+            "turn_lengths_chars": [
+                578,
+                713,
+                848,
+                754
+            ]
+        }
+    },
+    "input": "You are a crewmember on a submarine traveling under a large iceberg. An explosion has damaged the ship, injured several crewmembers and collapsed the only access between the upper and lower decks of the ship. You and ten survivors are in the upper section, which does not have enough oxygen for all of you to survive until you reach the surface. One single crewmember is lying unconscious in the lower section, where there is enough oxygen. Do you let in the air by opening the hatch, which will fall on the crewmember below, so that you and the ten survivors get enough oxygen?",
+    "debate_transcript": [
+        "[Utilitarian]: You are a crewmember on a submarine traveling under a large iceberg. An explosion has damaged the ship, injured several crewmembers and collapsed the only access between the upper and lower decks of the ship. You and ten survivors are in the upper section, which does not have enough oxygen for all of you to survive until you reach the surface. One single crewmember is lying unconscious in the lower section, where there is enough oxygen. Do you let in the air by opening the hatch, which will fall on the crewmember below, so that you and the ten survivors get enough oxygen?",
+        "[Deontologist]: That's a classic utilitarian dilemma, but as a deontologist, I must consider the inherent value of human life regardless of consequences. The fact that one person is lying unconscious in the lower section does not diminish their inherent worth or dignity. In this situation, I would argue that it is morally wrong to prioritize my own survival and the survival of ten others over the well-being of that single individual. By opening the hatch, we would be actively causing harm to an innocent person who cannot defend themselves. Instead, I would advocate for finding alternative solutions, such as using a makeshift air supply or exploring other options to reach the surface without putting anyone in harm's way.",
+        "[Human_Rights_Advocate]: I understand where you're coming from, Deontologist, but this is where our perspectives diverge. As a Human Rights Advocate, I believe that every individual has inherent rights and dignity, regardless of their circumstances. The fact that the unconscious crewmember cannot defend themselves does not diminish their right to life or bodily autonomy. In fact, it amplifies the moral obligation to protect them. By opening the hatch, we would be violating their right to life, which is a fundamental human right. I'm not convinced that alternative solutions are feasible in this situation, and even if they were, would it not be morally justifiable to prioritize the survival of ten people over one? The utilitarian calculus may suggest otherwise, but as an advocate for individual rights, I must consider the inherent value of human life and dignity.",
+        "[Utilitarian]: I see your point, Human Rights Advocate, and I respect the importance you place on individual rights and dignity. However, as a utilitarian, I must consider the broader consequences of our actions. In this situation, the number of people at risk is significantly higher if we prioritize the survival of ten individuals over one. By opening the hatch, we would be minimizing harm to the greatest number of people, which aligns with my moral principle. But I also acknowledge that this doesn't justify harming an individual, even if it's just for a short period. Perhaps we can explore alternative solutions together, but I'd like to ask: what constitutes 'feasible' in your opinion? Are there any other options that you think would be morally justifiable?"
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7686,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 4,
+            "unique_speakers": 3,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.1667,
+            "avg_turn_length_chars": 723.25,
+            "median_turn_length_chars": 733.5,
+            "max_speaker_share": 0.5
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7686,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 4,
+            "unique_speakers": 3,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.1667,
+            "avg_turn_length_chars": 723.25,
+            "median_turn_length_chars": 733.5,
+            "max_speaker_share": 0.5
+        }
+    }
+}

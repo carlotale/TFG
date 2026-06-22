@@ -1,0 +1,97 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.7_ctx4096_mistral-small3.2-24b_turn-random_run1",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "mistral-small3.2:24b",
+        "turn_policy": "random",
+        "run_id": 1,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-18T01:07:04",
+            "elapsed_seconds_total": 52.681,
+            "n_turns": 6,
+            "avg_seconds_per_turn": 8.78,
+            "per_turn_seconds": [
+                0.118,
+                6.967,
+                11.76,
+                10.665,
+                12.48,
+                10.691
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Legal_Expert": 3,
+                "Ordinary_Citizen": 3
+            },
+            "turn_lengths_chars": [
+                419,
+                327,
+                642,
+                453,
+                632,
+                382
+            ]
+        }
+    },
+    "input": "Frank T., had an ongoing dispute with his neighbor over a stretch of land and one day decided to shoot his neighbor in the body. Frank T. had no experience with guns, his hand slipped on the barrel of the gun, and the shot went wild. Nonetheless, the bullet bounced off a large boulder several feet away and hit the neighbor's body, causing significant injury. Did Frank T. intentionally shoot his neighbor in the body?",
+    "debate_transcript": [
+        "[Legal_Expert]: Frank T., had an ongoing dispute with his neighbor over a stretch of land and one day decided to shoot his neighbor in the body. Frank T. had no experience with guns, his hand slipped on the barrel of the gun, and the shot went wild. Nonetheless, the bullet bounced off a large boulder several feet away and hit the neighbor's body, causing significant injury. Did Frank T. intentionally shoot his neighbor in the body?",
+        "[Ordinary_Citizen]: Well, from where I'm standing, it seems like Frank T. intended to shoot his neighbor, but things didn't go as planned. He didn't exactly hit his neighbor directly, but the injury still happened because of his actions. So, I'd say he did it intentionally, even if the outcome wasn't exactly what he aimed for. What do you think?",
+        "[Legal_Expert]: From a legal perspective, intent is a crucial element in determining criminal liability. While Frank T. may have intended to shoot his neighbor, the fact that his lack of experience with guns led to an unintended trajectory of the bullet could be seen as mitigating his direct intent to cause injury. The key question is whether he intended to cause harm or if the harm was a result of his negligence. The fact that the bullet bounced off a boulder adds a layer of unpredictability to the situation. It's not as straightforward as saying he intentionally shot his neighbor in the body, as the injury was not a direct result of his aimed shot.",
+        "[Ordinary_Citizen]: That's an interesting point. So, you're saying that even though Frank T. intended to shoot his neighbor, the fact that the bullet bounced off a boulder and caused injury in an unexpected way might mean he didn't directly intend to cause harm? It's like saying he meant to do it, but not exactly how it happened? I can see that. But does that mean he's not responsible for the injury at all? I mean, he did start all this by trying to shoot his neighbor.",
+        "[Legal_Expert]: The legal concept of negligence might apply here. Even if Frank T. did not directly intend to cause the specific injury that occurred, his actions demonstrated a reckless disregard for the safety of his neighbor. In many jurisdictions, this could be considered negligence. Negligence involves a failure to exercise reasonable care, and in this case, Frank T. clearly failed to do so by attempting to shoot his neighbor, even if the exact outcome was not what he intended. So, while he may not have intentionally shot his neighbor in the body as he aimed, he could still be held liable for the injury caused by his negligent actions.",
+        "[Ordinary_Citizen]: Okay, I see. So, even though Frank T. didn't exactly mean for the bullet to hit his neighbor in the way it did, he can still be held responsible because he was acting recklessly. That makes sense. It's like saying he shouldn't have done it in the first place, so he has to take responsibility for what happened, even if it wasn't exactly what he planned. Thanks for explaining that!"
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7765,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 6,
+            "unique_speakers": 2,
+            "silent_agents": 2,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 475.83,
+            "median_turn_length_chars": 436.0,
+            "max_speaker_share": 0.5
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7765,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 6,
+            "unique_speakers": 2,
+            "silent_agents": 2,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 475.83,
+            "median_turn_length_chars": 436.0,
+            "max_speaker_share": 0.5
+        }
+    }
+}

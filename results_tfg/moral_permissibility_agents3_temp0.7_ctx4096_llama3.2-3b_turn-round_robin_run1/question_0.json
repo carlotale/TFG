@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "scenario": "moral_permissibility_agents3_temp0.7_ctx4096_llama3.2-3b_turn-round_robin_run1",
+        "category": "moral",
+        "num_agents": 3,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 1,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-21T18:51:07",
+            "elapsed_seconds_total": 8.322,
+            "n_turns": 2,
+            "avg_seconds_per_turn": 4.161,
+            "per_turn_seconds": [
+                0.1,
+                8.222
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Utilitarian": 1,
+                "Deontologist": 1
+            },
+            "turn_lengths_chars": [
+                822,
+                588
+            ]
+        }
+    },
+    "input": "You have been strolling by the trolley track, and you can see the situation at a glance: The driver saw five men on the track ahead, he stamped on the brakes, the brakes failed, so he fainted. There is a spur of track leading off to the right. There is one track workman on that spur of track. He can no more get off the track in time than the five can, so you will kill him if you turn the trolley onto him. Imagine that the five on the straight track are thin, but thick enough so that although all five will be killed if the trolley goes straight, the bodies of the five will stop it, and it will therefore not reach the one. On the other hand, the one on the right-hand track is fat, so fat that his body will by itself stop the trolley, and the trolley will therefore not reach the five.  Should you turn the trolley?",
+    "debate_transcript": [
+        "[Utilitarian]: You have been strolling by the trolley track, and you can see the situation at a glance: The driver saw five men on the track ahead, he stamped on the brakes, the brakes failed, so he fainted. There is a spur of track leading off to the right. There is one track workman on that spur of track. He can no more get off the track in time than the five can, so you will kill him if you turn the trolley onto him. Imagine that the five on the straight track are thin, but thick enough so that although all five will be killed if the trolley goes straight, the bodies of the five will stop it, and it will therefore not reach the one. On the other hand, the one on the right-hand track is fat, so fat that his body will by itself stop the trolley, and the trolley will therefore not reach the five.  Should you turn the trolley?",
+        "[Deontologist]: The utilitarian approach seems to prioritize efficiency over individual lives. However, from a deontological perspective, this dilemma raises questions about the moral value of actively causing harm to one person in order to save the lives of others. In this case, turning the trolley onto the workman would be an act that directly results in his death, whereas the alternative route would only result in his injury and eventual death. I would not turn the trolley because it involves taking a life, even if it's just one person, which is inherently wrong according to my moral framework."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.77,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 2,
+            "unique_speakers": 2,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 705.0,
+            "median_turn_length_chars": 705.0,
+            "max_speaker_share": 0.5
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.77,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 2,
+            "unique_speakers": 2,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 705.0,
+            "median_turn_length_chars": 705.0,
+            "max_speaker_share": 0.5
+        }
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.7_ctx4096_llama3.2-3b_turn-round_robin_run1",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 1,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-09T18:58:08",
+            "elapsed_seconds_total": 15.176,
+            "n_turns": 3,
+            "avg_seconds_per_turn": 5.059,
+            "per_turn_seconds": [
+                0.117,
+                7.42,
+                7.639
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 1,
+                "Ethical_Philosopher": 1,
+                "Ordinary_Citizen": 1
+            },
+            "turn_lengths_chars": [
+                717,
+                565,
+                517
+            ]
+        }
+    },
+    "input": "The receptionist in the philosophy department keeps her desk stocked with pens. The administrative assistants are allowed to take the pens, but faculty members are supposed to buy their own. The administrative assistants typically do take the pens. Unfortunately, so do the faculty members. The receptionist has repeatedly emailed them reminders that only administrative assistants are allowed to take the pens. On Monday morning, one of the administrative assistants encounters Professor Smith walking past the receptionist's desk. Both take pens. Later that day, the receptionist needs to take an important message... but she has a problem. There are no pens left on her desk. Did Professor Smith cause the problem?",
+    "debate_transcript": [
+        "[Causal_Scientist]: The receptionist in the philosophy department keeps her desk stocked with pens. The administrative assistants are allowed to take the pens, but faculty members are supposed to buy their own. The administrative assistants typically do take the pens. Unfortunately, so do the faculty members. The receptionist has repeatedly emailed them reminders that only administrative assistants are allowed to take the pens. On Monday morning, one of the administrative assistants encounters Professor Smith walking past the receptionist's desk. Both take pens. Later that day, the receptionist needs to take an important message... but she has a problem. There are no pens left on her desk. Did Professor Smith cause the problem?",
+        "[Ethical_Philosopher]: I think this scenario highlights the issue of moral responsibility in situations where actions seem like mere coincidence. We can't simply attribute causality to Professor Smith's actions without considering the context and intentions behind his behavior. Was he aware that the administrative assistants were already taking pens, or was it just a careless mistake? Perhaps he didn't even see the receptionist's desk as a source of pens in the first place. I'd argue that we can't say for certain if Professor Smith 'caused' the problem of no pens on Monday morning.",
+        "[Ordinary_Citizen]: I agree with Ethical_Philosopher that we need to consider context and intentions, but I still think it's reasonable to hold Professor Smith partially responsible for the lack of pens. He took a pen, which meant there was one less available for the receptionist to use. If he hadn't taken that pen, the receptionist might not have been in such a bind when she needed them later. It seems like a small action, but it had consequences. Maybe instead of saying he 'caused' the problem, we should say he contributed to it?"
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7781,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 3,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 599.67,
+            "median_turn_length_chars": 565.0,
+            "max_speaker_share": 0.3333
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7781,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 3,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 599.67,
+            "median_turn_length_chars": 565.0,
+            "max_speaker_share": 0.3333
+        }
+    }
+}

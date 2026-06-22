@@ -1,0 +1,93 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.7_ctx4096_llama3.2-3b_turn-random_run0",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "random",
+        "run_id": 0,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-09T19:22:34",
+            "elapsed_seconds_total": 28.536,
+            "n_turns": 4,
+            "avg_seconds_per_turn": 7.134,
+            "per_turn_seconds": [
+                0.084,
+                7.384,
+                10.983,
+                10.085
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Ordinary_Citizen": 1,
+                "Causal_Scientist": 1,
+                "Legal_Expert": 1,
+                "Ethical_Philosopher": 1
+            },
+            "turn_lengths_chars": [
+                528,
+                514,
+                927,
+                812
+            ]
+        }
+    },
+    "input": "Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+    "debate_transcript": [
+        "[Ordinary_Citizen]: Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+        "[Causal_Scientist]: That's an interesting scenario, but I'd say causality runs both ways here. If Suzy and Billy arrived exactly at 9 am, that means they must have triggered the motion detector simultaneously, since it was set up to detect more than one person entering the room at once. So, in a sense, you could argue that both Suzy's arrival and Billy's arrival caused the motion detector to go off. It's not just about who arrived first or if someone else had entered previously - the detection system itself is what triggered it.",
+        "[Legal_Expert]: I think Causal_Scientist makes a valid point, but let's consider the legal implications of this scenario as well. In general, the concept of causation in law revolves around the idea that one party must have been the direct cause of an event or harm. If we're considering whether Billy caused the motion detector to go off, I'd argue that Suzy's arrival is a necessary but not sufficient condition for the trigger. The actual triggering of the system was dependent on both parties' simultaneous presence in the room. However, this doesn't necessarily mean Billy directly caused the motion detector to activate. Perhaps it's more accurate to say that the combined actions (or rather, simultaneous arrivals) of Suzy and Billy resulted in the motion detector going off. But from a legal perspective, if someone can be held liable for triggering the system, I'd expect it to be a collective liability rather than an individual one.",
+        "[Ethical_Philosopher]: I see where Causal_Scientist is coming from, but as an Ethical Philosopher, my focus is on moral responsibility rather than causality alone. While the motion detector's activation was indeed triggered by Suzy and Billy's simultaneous arrival, I'd argue that it's unfair to attribute causation solely to either party. What if Suzy had arrived a few seconds before Billy? Would we say she caused the motion detector to go off? The question isn't whether one person or the other is directly responsible, but rather, who has the most moral responsibility for the situation. In this case, both Suzy and Billy are equally implicated in triggering the system, which raises questions about their individual and collective liability. I'd like to explore further how we can determine who bears more of that responsibility."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7694,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 4,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 695.25,
+            "median_turn_length_chars": 670.0,
+            "max_speaker_share": 0.25
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7694,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 4,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 695.25,
+            "median_turn_length_chars": 670.0,
+            "max_speaker_share": 0.25
+        }
+    }
+}

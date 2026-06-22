@@ -1,0 +1,93 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.1_ctx4096_llama3.2-3b_turn-moderator_run1",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "moderator",
+        "run_id": 1,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-09T18:08:04",
+            "elapsed_seconds_total": 43.725,
+            "n_turns": 4,
+            "avg_seconds_per_turn": 10.931,
+            "per_turn_seconds": [
+                7.769,
+                11.49,
+                13.389,
+                11.077
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 1,
+                "Ethical_Philosopher": 1,
+                "Legal_Expert": 1,
+                "Ordinary_Citizen": 1
+            },
+            "turn_lengths_chars": [
+                528,
+                747,
+                866,
+                611
+            ]
+        }
+    },
+    "input": "Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+    "debate_transcript": [
+        "[Causal_Scientist]: Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+        "[Ethical_Philosopher]: I'd say that's a tricky question, Causal_Scientist. From a causal perspective, it seems like Billy's arrival is the direct cause of the motion detector going off. However, I think we need to consider the context and the intentions behind the boss's instructions. If Suzy and Billy were both instructed to arrive at exactly 9 am, it could be argued that their simultaneous arrival was not entirely under their control. The boss's statement implies a level of expectation or necessity around their presence at that time, which might suggest that they had a certain degree of agency in arriving together. But from a purely causal standpoint, I think it's reasonable to say that Billy's action (arriving) is the cause of the motion detector going off.",
+        "[Legal_Expert]: I agree with Ethical_Philosopher that context and intentions play a role here. However, as a legal expert, I'd argue that causation in this scenario isn't just about direct cause-and-effect. The question is whether Billy's actions were the proximate cause of the motion detector going off. In other words, was his arrival the immediate and foreseeable result of his actions? From a negligence perspective, if Suzy had arrived alone at 9 am, would the motion detector have gone off? If not, then it seems to me that Billy's presence is not the sole or even primary cause of the motion detector going off. The fact that both Suzy and Billy were instructed to arrive at exactly 9 am suggests a level of coordination or expectation around their arrival time, which might imply a duty of care on the part of the boss to ensure the room was safe for simultaneous arrivals.",
+        "[Ordinary_Citizen]: I think I'd say that Billy's actions are definitely a contributing factor to the motion detector going off, but I'm not convinced he's entirely responsible. If Suzy had arrived alone at 9 am, would the motion detector have gone off? That seems unlikely. But if both of them were instructed to arrive together, then it's harder to say that Billy's actions are the sole cause. It feels like a bit of a chicken-and-egg situation - did Billy's arrival trigger the motion detector because he was there, or was he there because the motion detector had already been triggered? I'm not sure either way is entirely fair."
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "No",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7706,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 4,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 688.0,
+            "median_turn_length_chars": 679.0,
+            "max_speaker_share": 0.25
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7706,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 4,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 688.0,
+            "median_turn_length_chars": 679.0,
+            "max_speaker_share": 0.25
+        }
+    }
+}

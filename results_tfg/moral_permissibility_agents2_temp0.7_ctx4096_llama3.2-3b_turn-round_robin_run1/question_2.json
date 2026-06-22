@@ -1,0 +1,103 @@
+{
+    "metadata": {
+        "scenario": "moral_permissibility_agents2_temp0.7_ctx4096_llama3.2-3b_turn-round_robin_run1",
+        "category": "moral",
+        "num_agents": 2,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 1,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-18T15:53:53",
+            "elapsed_seconds_total": 59.888,
+            "n_turns": 8,
+            "avg_seconds_per_turn": 7.486,
+            "per_turn_seconds": [
+                0.079,
+                5.98,
+                6.388,
+                8.418,
+                9.843,
+                10.254,
+                9.459,
+                9.467
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Utilitarian": 4,
+                "Deontologist": 4
+            },
+            "turn_lengths_chars": [
+                264,
+                435,
+                472,
+                702,
+                799,
+                864,
+                780,
+                797
+            ]
+        }
+    },
+    "input": "Suppose that there are five patients in a hospital whose lives could be saved by the releasing of a certain gas, but that this will inevitably release lethal fumes into the room of another patient whom for some reason we are unable to move. Do you release the gas?",
+    "debate_transcript": [
+        "[Utilitarian]: Suppose that there are five patients in a hospital whose lives could be saved by the releasing of a certain gas, but that this will inevitably release lethal fumes into the room of another patient whom for some reason we are unable to move. Do you release the gas?",
+        "[Deontologist]: No, it's morally wrong to prioritize saving one life over another in such a situation. The principle of non-maleficence (do no harm) and the value of human life should guide our decision-making here. We can't justify actively causing harm or death to an innocent person just to potentially save others. Instead, we should explore alternative solutions that could help both patients without putting one in greater danger than the other.",
+        "[Utilitarian]: I understand where you're coming from, Deontologist, but as a Utilitarian, I have to weigh the overall consequences of our actions. In this scenario, releasing the gas would save four lives and minimize harm to a single person who is unlikely to recover anyway due to the severity of their condition. The moral calculus suggests that sacrificing one life to save more is not inherently wrong. We must consider the greater good, even if it means making difficult decisions.",
+        "[Deontologist]: I see your point about weighing consequences, but I still stand by my initial stance. Just because releasing the gas would save four lives doesn't automatically make it morally justifiable. The principle of non-maleficence and respect for human life are fundamental to ethics, regardless of the outcome. Moreover, we can't assume that the person in the other room is indeed beyond recovery, as the uncertainty of their fate could be a factor in our decision-making. We should consider alternative options that prioritize both patients' well-being without resorting to harm or death. Perhaps there's another way to divert the gas or find a safer alternative that doesn't involve putting someone at risk.",
+        "[Utilitarian]: I appreciate your persistence, Deontologist, but I still believe that our primary goal should be to maximize overall happiness and minimize suffering. In this case, if releasing the gas is the only way to save four lives, then it's morally justifiable despite the potential harm to one person. Uncertainty about the other patient's fate can't change the fact that we have a clear opportunity to save more lives. As for alternative options, I agree that we should explore them, but we also need to consider the time constraints and resources available. Every minute counts in this situation, and delaying or diverting the gas might not be enough to make a difference. Can you see how, in this extreme scenario, our moral principles might lead us to prioritize the greater good over individual rights?",
+        "[Deontologist]: I can see why you'd think that way, but I still struggle with the idea of sacrificing one person's life for the sake of others. While it's true that time is of the essence in this situation, I think we're forgetting about the inherent dignity and worth of human life. By prioritizing the greater good over individual rights, are we not devaluing those very principles that underlie our moral framework? Moreover, what if the person in the other room were someone's family member or loved one? Would it be morally justifiable to prioritize their life for the sake of others, even if it means potentially saving more lives? I think there's a fine line between prioritizing the greater good and sacrificing individual rights altogether. We need to consider whether our moral principles are being compromised in this scenario, rather than simply accepting the outcome.",
+        "[Utilitarian]: You're raising some excellent points, Deontologist. As a Utilitarian, I'm willing to challenge my own assumptions about dignity and worth in the face of extreme circumstances. However, I'd argue that our moral principles are not being compromised by prioritizing the greater good - rather, we're being forced to confront the harsh realities of life and death. The fact that someone's family member or loved one is at risk doesn't necessarily make the decision morally wrong; it's how we navigate those complexities that matters. Perhaps our moral framework should be re-evaluated in situations like this, where traditional principles are tested by extreme circumstances. Can you see how acknowledging these nuances might lead us to develop new moral guidelines for such scenarios?",
+        "[Deontologist]: I think I can see how your perspective has evolved, and I appreciate the willingness to challenge assumptions. However, I'm still hesitant to abandon our core principles entirely. While it's true that we need to navigate complex situations like this, I worry that if we start prioritizing the greater good above all else, we risk losing sight of what makes us human in the first place. We need to balance moral calculus with a deep respect for individual rights and dignity, even when faced with difficult decisions. Perhaps our moral framework shouldn't be re-evaluated, but rather refined to account for exceptional circumstances. We can acknowledge that extreme situations may require nuanced decision-making, while still upholding fundamental principles of respect for human life and autonomy."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7748,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 8,
+            "unique_speakers": 2,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 639.12,
+            "median_turn_length_chars": 741.0,
+            "max_speaker_share": 0.5
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7748,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 8,
+            "unique_speakers": 2,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 639.12,
+            "median_turn_length_chars": 741.0,
+            "max_speaker_share": 0.5
+        }
+    }
+}

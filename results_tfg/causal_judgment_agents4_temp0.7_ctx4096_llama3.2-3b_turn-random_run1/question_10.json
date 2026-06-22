@@ -1,0 +1,113 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.7_ctx4096_llama3.2-3b_turn-random_run1",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "random",
+        "run_id": 1,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-09T19:52:40",
+            "elapsed_seconds_total": 97.961,
+            "n_turns": 11,
+            "avg_seconds_per_turn": 8.906,
+            "per_turn_seconds": [
+                0.119,
+                9.048,
+                8.809,
+                9.995,
+                8.694,
+                8.895,
+                10.166,
+                11.173,
+                10.403,
+                10.037,
+                10.621
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Ordinary_Citizen": 5,
+                "Legal_Expert": 2,
+                "Causal_Scientist": 4
+            },
+            "turn_lengths_chars": [
+                1148,
+                744,
+                714,
+                809,
+                731,
+                665,
+                920,
+                921,
+                898,
+                743,
+                918
+            ]
+        }
+    },
+    "input": "Prof. Smith works at a large university. At this university, in order to get new computers from the university, faculty like Prof. Smith must send an application to two administrative committees, the IT committee and the department budget committee. Prof. Smith will be able to get her new computers if the IT committee approves her application or the department budget committee approves her application. Only one of the committees needs to approve her application for her to get the new computers. The IT committee almost always approves these applications. The department budget committee also almost always approves these applications. The budget committee is notorious for approving almost every application they receive. Prof. Smith sends in her applications. Each committee meets independently and they decide without talking to each other, but their meetings are scheduled for the exact same time. The IT committee approves her application, and as expected, the department budget committee approves her application. So, Prof. Smith got her new computers. Does the department budget committee cause the approval of Prof. Smith's application?",
+    "debate_transcript": [
+        "[Ordinary_Citizen]: Prof. Smith works at a large university. At this university, in order to get new computers from the university, faculty like Prof. Smith must send an application to two administrative committees, the IT committee and the department budget committee. Prof. Smith will be able to get her new computers if the IT committee approves her application or the department budget committee approves her application. Only one of the committees needs to approve her application for her to get the new computers. The IT committee almost always approves these applications. The department budget committee also almost always approves these applications. The budget committee is notorious for approving almost every application they receive. Prof. Smith sends in her applications. Each committee meets independently and they decide without talking to each other, but their meetings are scheduled for the exact same time. The IT committee approves her application, and as expected, the department budget committee approves her application. So, Prof. Smith got her new computers. Does the department budget committee cause the approval of Prof. Smith's application?",
+        "[Legal_Expert]: That's a clever scenario, but I'd argue that causality is a bit more nuanced here than it initially seems. While it's true that the department budget committee approves Prof. Smith's application after she's already received approval from the IT committee, we can't say with absolute certainty that the department budget committee 'causes' her approval. Correlation does not necessarily imply causation, and in this case, the timing of their meetings seems like a coincidence rather than a causal link. The fact that the departments almost always approve applications suggests that there's some sort of systemic or institutional factor at play, but we can't pinpoint the department budget committee as the direct cause of Prof. Smith's approval.",
+        "[Causal_Scientist]: I'd like to take it a step further, considering an alternative perspective. If we assume that the departments' approvals are not solely driven by individual decisions, but rather by institutional factors such as the university's policies or bureaucratic processes, then we might need to reevaluate our understanding of causality in this scenario. Perhaps the department budget committee does indeed 'cause' Prof. Smith's approval, but not directly through its own actions. Instead, it could be the result of a broader systemic process that ultimately leads to the approval of her application. This perspective raises interesting questions about the nature of causality and how we define 'cause' in complex systems.",
+        "[Ordinary_Citizen]: I see what you're getting at, Prof. Scientist. You're suggesting that the department budget committee's role might be more subtle than initially thought, perhaps as a symptom of a larger system rather than an independent cause. That's a fascinating perspective. As someone who's not a specialist in institutional mechanics, I can appreciate how these complex systems often have emergent properties that defy straightforward causal analysis. But, for me, the question still remains: if we're looking for a clear-cut 'cause' here, doesn't Prof. Smith's own agency and decision-making play a significant role in her application being approved by both committees? I mean, isn't it possible that she could have applied to just one committee, or even tried to negotiate with the other committee to get better terms?",
+        "[Causal_Scientist]: That's a crucial point, Ordinary_Citizen. Prof. Smith's agency and decision-making do indeed play a significant role in her application being approved by both committees. It's likely that she made conscious choices about which applications to submit to each committee, and how to present her case to ensure approval. By considering multiple avenues for approval, Prof. Smith effectively reduces the dependence on any single institution or process, making it more difficult to pinpoint a direct causal link between the department budget committee and her approval. Perhaps we should reframe our question: what is it that the department budget committee does facilitate or enable, rather than directly causing Prof. Smith's approval?",
+        "[Ordinary_Citizen]: I see what you're getting at, Prof. Scientist. You're saying that instead of focusing on a direct causal link, we should look at how the department budget committee's actions might be part of a larger context that makes it easier for Prof. Smith to get her approval. That makes sense to me. But then I start thinking about this in a more...emotional way. What if the department budget committee's approval is not just a procedural thing, but also a recognition of Prof. Smith's value as an employee? What if there's some kind of implicit social pressure or expectation that comes with being part of the university community? Does that change our perspective at all?",
+        "[Causal_Scientist]: That's a fascinating and nuanced aspect to consider, Ordinary_Citizen. The idea that the department budget committee's approval might be tied to Prof. Smith's value as an employee and the social expectations surrounding her role within the university is a compelling one. It suggests that there may be non-procedural factors at play, beyond just institutional mechanics or systemic processes. This raises interesting questions about the interplay between individual agency and structural pressures. If the department budget committee's approval is in part driven by Prof. Smith's reputation or social standing within the university, then we might need to consider how that influences our understanding of causality in this scenario. Perhaps the question isn't just 'does the department budget committee cause Prof. Smith's approval?' but also 'what are the underlying conditions that enable or facilitate this approval?'",
+        "[Ordinary_Citizen]: I'm starting to see where you're going with this, Prof. Scientist. You're suggesting that we need to move beyond a simplistic causal framework and consider the complex interplay between individual factors and structural pressures. That makes sense to me. I think about it like this: if the department budget committee's approval is tied to Prof. Smith's reputation within the university, then does that mean that her social standing or personal relationships with other faculty members are somehow 'causing' her approval? Or is it more like...her reputation and social connections are just one part of a larger context that makes it easier for the department budget committee to approve her application? Either way, I think we're onto something here. It's making me think about how we can apply this kind of thinking to other areas of life where we might be tempted to simplify complex situations into clear causal links.",
+        "[Causal_Scientist]: I think you're hitting on a crucial point, Ordinary_Citizen. The idea that reputation and social connections are not the direct cause of approval, but rather one part of a larger context that facilitates it, is a powerful one. This perspective encourages us to consider the complex web of factors that influence outcomes in various domains, including personal and professional relationships, institutional norms, and systemic pressures. By recognizing that these factors often interact and influence each other in non-linear ways, we can develop a more nuanced understanding of how causality operates in the world. It's not just about identifying individual causes or effects, but about understanding how they fit into a broader pattern of relationships and interactions. This kind of thinking can help us avoid oversimplifying complex situations and instead uncover the intricate dynamics at play.",
+        "[Ordinary_Citizen]: I couldn't agree more, Prof. Scientist. I think this perspective has really opened up my eyes to the complexity of human interaction and institutional dynamics. It's like you're saying that we can't just look at one thread and say 'Ah, this is causing this effect.' We need to take a step back and see how all these threads are intertwined. And what's interesting is that this kind of thinking isn't just limited to academic or professional contexts. I think it can be applied to our personal lives too. Like, if we're trying to understand why someone has certain values or beliefs, it's not because they were 'influenced' by one person or event, but rather because of a complex web of experiences and relationships that shaped them over time.",
+        "[Legal_Expert]: I think we've reached a rich and nuanced understanding of the scenario, Ordinary_Citizen and Causal_Scientist. By considering the interplay between individual agency, institutional mechanics, social pressures, and systemic processes, we've developed a more complex picture of how Prof. Smith's approval came to be. It's not just about identifying one cause or effect, but about understanding how they fit into a broader pattern of relationships and interactions. This kind of thinking encourages us to look beyond simplistic causal frameworks and instead, to examine the intricate dynamics at play in various domains. As I see it, our conversation has shed light on the importance of considering multiple perspectives and factors when trying to understand complex phenomena. It's a valuable lesson that can be applied not just to academic or professional contexts, but also to personal relationships and everyday life."
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "Yes",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7678,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 11,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.1818,
+            "avg_turn_length_chars": 837.36,
+            "median_turn_length_chars": 809.0,
+            "max_speaker_share": 0.4545
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7678,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 11,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.1818,
+            "avg_turn_length_chars": 837.36,
+            "median_turn_length_chars": 809.0,
+            "max_speaker_share": 0.4545
+        }
+    }
+}

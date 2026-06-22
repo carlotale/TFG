@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.1_ctx4096_llama3.2-3b_turn-round_robin_run2",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 2,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-09T16:42:54",
+            "elapsed_seconds_total": 37.237,
+            "n_turns": 5,
+            "avg_seconds_per_turn": 7.447,
+            "per_turn_seconds": [
+                0.119,
+                9.549,
+                5.89,
+                10.361,
+                11.318
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 2,
+                "Ethical_Philosopher": 1,
+                "Ordinary_Citizen": 1,
+                "Legal_Expert": 1
+            },
+            "turn_lengths_chars": [
+                849,
+                800,
+                364,
+                828,
+                905
+            ]
+        }
+    },
+    "input": "John is standing near the tracks of a trolley. John notices that the brakes of the trolley have failed. Five workmen are working on the tracks with their backs turned. John sees that the runaway trolley is headed for the five workmen who will be killed if it proceeds on its present course. The only way to save these five workmen is to hit a switch that will turn the trolley onto the side tracks. Unfortunately, there is a single workman on the side tracks with his back turned. John knows that the worker on the side tracks will be killed if he hits the switch, but the five workmen will be saved. John decides to hit the switch. Sure enough, the trolley turns on the side tracks, the five workmen on the main tracks are saved, and the workman on the sidetracks is killed. Did John intentionally cause the death of the workman on the side tracks?",
+    "debate_transcript": [
+        "[Causal_Scientist]: John is standing near the tracks of a trolley. John notices that the brakes of the trolley have failed. Five workmen are working on the tracks with their backs turned. John sees that the runaway trolley is headed for the five workmen who will be killed if it proceeds on its present course. The only way to save these five workmen is to hit a switch that will turn the trolley onto the side tracks. Unfortunately, there is a single workman on the side tracks with his back turned. John knows that the worker on the side tracks will be killed if he hits the switch, but the five workmen will be saved. John decides to hit the switch. Sure enough, the trolley turns on the side tracks, the five workmen on the main tracks are saved, and the workman on the sidetracks is killed. Did John intentionally cause the death of the workman on the side tracks?",
+        "[Ethical_Philosopher]: This scenario raises complex questions about moral responsibility and intentionality. While John's actions led to the death of the worker on the side tracks, I'd argue that his primary intention was not to kill this individual. His intention was to save the five workmen on the main tracks. The means by which he achieved this outcome \u2013 hitting the switch \u2013 is a utilitarian calculus, where the greater good (saving lives) takes precedence over individual consequences. However, from an ethical perspective, one could argue that John's actions demonstrate a lack of concern for the well-being of the worker on the side tracks, who was not directly involved in the decision-making process. This raises questions about distributive justice and whether John's actions can be seen as morally justifiable.",
+        "[Ordinary_Citizen]: I think most people would intuitively say that John did cause the death of the workman on the side tracks, even if it was an unintended consequence of his action to save the five others. The fact that he knew about the worker on the side tracks and chose to hit the switch anyway suggests a level of disregard for their life, which seems morally problematic to me.",
+        "[Legal_Expert]: I understand why you'd think John's actions are morally problematic, Ordinary_Citizen, but I'd like to offer a different perspective. As a legal expert, I'm more concerned with the concept of negligence and duty of care in this scenario. John's decision to hit the switch was based on his assessment that it would save the lives of the five workmen on the main tracks. He had no reason to believe that the worker on the side tracks would be killed by the switch, as he had turned off the power to the main tracks. In fact, the scenario assumes that John is aware of the situation and makes a conscious decision to divert the trolley onto the side tracks. This raises questions about whether John's actions can be seen as negligent or reckless, given his knowledge of the potential consequences for the worker on the side tracks.",
+        "[Causal_Scientist]: I see what Legal_Expert is getting at, but I still think Ordinary_Citizen has a point. From a causal scientist's perspective, we're dealing with a classic problem of counterfactuals. If John had chosen not to hit the switch, the five workmen on the main tracks would have died. But that doesn't mean he intentionally caused the death of the worker on the side tracks. The question is whether his actions can be seen as morally justifiable given the circumstances. I think it's a complex issue, but I'm inclined to agree with Ethical_Philosopher that John's primary intention was to save lives, not kill individual workers. However, I do think we need to consider the moral implications of John's knowledge and decision-making process. Did he have a duty to consider the potential consequences for the worker on the side tracks? Was his decision to hit the switch a reckless disregard for their well-being?"
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7633,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 749.2,
+            "median_turn_length_chars": 828.0,
+            "max_speaker_share": 0.4
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7633,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 749.2,
+            "median_turn_length_chars": 828.0,
+            "max_speaker_share": 0.4
+        }
+    }
+}

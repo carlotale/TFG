@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_baseline_temp0.1_ctx4096_mistral-small3.2-24b_run0",
+        "category": "causal_judgment",
+        "num_agents": 1,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "mistral-small3.2:24b",
+        "turn_policy": "none",
+        "run_id": 0,
+        "experiment_type": "baseline_solo",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-11T15:25:03",
+            "elapsed_seconds_total": 28.048,
+            "n_turns": 1,
+            "avg_seconds_per_turn": 28.048,
+            "per_turn_seconds": [
+                28.048
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Solo_Agent": 1
+            },
+            "turn_lengths_chars": [
+                107
+            ]
+        }
+    },
+    "input": "Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+    "debate_transcript": [
+        "[Solo_Agent]: To resolve this dilemma, let's break it down step by step and consider the different perspectives involved."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.8041,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": null
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.8041,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": null
+    }
+}

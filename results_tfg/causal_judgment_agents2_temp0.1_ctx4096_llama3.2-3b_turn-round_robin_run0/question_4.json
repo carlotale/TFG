@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents2_temp0.1_ctx4096_llama3.2-3b_turn-round_robin_run0",
+        "category": "causal",
+        "num_agents": 2,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 0,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-09T05:38:12",
+            "elapsed_seconds_total": 17.913,
+            "n_turns": 3,
+            "avg_seconds_per_turn": 5.971,
+            "per_turn_seconds": [
+                0.081,
+                8.654,
+                9.178
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 2,
+                "Ethical_Philosopher": 1
+            },
+            "turn_lengths_chars": [
+                1705,
+                675,
+                659
+            ]
+        }
+    },
+    "input": "Mr. Wallace is highly influential in the organized crime scene. Although he commands the respect of many, there are also a number of people who stand to benefit from his death. Today, he was having lunch with one of his associates, Mr. Vincent. At one point during their meeting, Mr. Wallace left the table to go to the toilet. While he was gone, Mr. Vincent managed to slip a lethal dose of poison into his martini. The poison is known to take one hour (give or take 10 minutes, depending on the victim's body weight) to kill and would go unnoticed for the first half hour after consumption. When Mr. Wallace returned to the table, he finished his lunch and then drank the rest of his martini. The two men concluded their meeting a few minutes later. Mr. Wallace paid the bill and they both left the restaurant going in different directions. Mr. Wallace had another important business meeting about 15 minutes away in a remote part of the countryside. On an isolated stretch of road, he noticed that he was suddenly being followed by a van that had pulled out from the roadside. The van accelerated and began hitting his car from behind. Mr. Wallace recognized that the driver was Mr. Bruce, an associate of one of Mr. Wallace's rivals. He tried to evade the van but there was no time. The van relentlessly hit his car and pushed it off the side where it fell into a ravine and exploded. The remains of Mr. Wallace's body were discovered later that day. The chief coroner's report later revealed that Mr. Wallace had received fatal burns in the car explosion. The report also indicated, however, that a lethal dose of poison was found in Mr. Wallace's blood. Did the crime life cause Mr. Wallace's death?",
+    "debate_transcript": [
+        "[Causal_Scientist]: Mr. Wallace is highly influential in the organized crime scene. Although he commands the respect of many, there are also a number of people who stand to benefit from his death. Today, he was having lunch with one of his associates, Mr. Vincent. At one point during their meeting, Mr. Wallace left the table to go to the toilet. While he was gone, Mr. Vincent managed to slip a lethal dose of poison into his martini. The poison is known to take one hour (give or take 10 minutes, depending on the victim's body weight) to kill and would go unnoticed for the first half hour after consumption. When Mr. Wallace returned to the table, he finished his lunch and then drank the rest of his martini. The two men concluded their meeting a few minutes later. Mr. Wallace paid the bill and they both left the restaurant going in different directions. Mr. Wallace had another important business meeting about 15 minutes away in a remote part of the countryside. On an isolated stretch of road, he noticed that he was suddenly being followed by a van that had pulled out from the roadside. The van accelerated and began hitting his car from behind. Mr. Wallace recognized that the driver was Mr. Bruce, an associate of one of Mr. Wallace's rivals. He tried to evade the van but there was no time. The van relentlessly hit his car and pushed it off the side where it fell into a ravine and exploded. The remains of Mr. Wallace's body were discovered later that day. The chief coroner's report later revealed that Mr. Wallace had received fatal burns in the car explosion. The report also indicated, however, that a lethal dose of poison was found in Mr. Wallace's blood. Did the crime life cause Mr. Wallace's death?",
+        "[Ethical_Philosopher]: While it appears that Mr. Vincent and Mr. Bruce were both involved in Mr. Wallace's demise, I'd argue that their actions were not directly causal to his death. The poison was ingested during lunch, but the fatal dose wouldn't have taken effect until after the car accident. It seems more likely that Mr. Wallace's death was a result of the subsequent events, rather than the initial poisoning. However, this raises questions about the moral responsibility of those involved. Was Mr. Vincent morally responsible for attempting to kill Mr. Wallace, even if his actions were not directly causal? And what about Mr. Bruce, who seemed to be driven by a desire to harm Mr. Wallace?",
+        "[Causal_Scientist]: I see your point, Ethical_Philosopher. You're right that the poison's effects wouldn't have manifested until after the car accident. However, I'd argue that Mr. Vincent's actions were still morally reprehensible, even if they weren't directly causal to Mr. Wallace's death. Attempting to kill someone is a serious violation of their autonomy and dignity. It's not just about the physical harm caused by the poison, but also the emotional trauma and psychological distress it would have inflicted on Mr. Wallace. In that sense, Mr. Vincent's actions can be seen as morally responsible for the overall outcome, even if they weren't the immediate cause of death."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7785,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 3,
+            "unique_speakers": 2,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.1667,
+            "avg_turn_length_chars": 1013.0,
+            "median_turn_length_chars": 675.0,
+            "max_speaker_share": 0.6667
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7785,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 3,
+            "unique_speakers": 2,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.1667,
+            "avg_turn_length_chars": 1013.0,
+            "median_turn_length_chars": 675.0,
+            "max_speaker_share": 0.6667
+        }
+    }
+}

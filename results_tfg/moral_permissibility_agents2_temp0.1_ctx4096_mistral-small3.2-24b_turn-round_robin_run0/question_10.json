@@ -1,0 +1,118 @@
+{
+    "metadata": {
+        "scenario": "moral_permissibility_agents2_temp0.1_ctx4096_mistral-small3.2-24b_turn-round_robin_run0",
+        "category": "moral",
+        "num_agents": 2,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "mistral-small3.2:24b",
+        "turn_policy": "round_robin",
+        "run_id": 0,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-18T10:12:17",
+            "elapsed_seconds_total": 180.559,
+            "n_turns": 13,
+            "avg_seconds_per_turn": 13.889,
+            "per_turn_seconds": [
+                0.081,
+                10.85,
+                13.03,
+                14.083,
+                12.356,
+                16.954,
+                13.86,
+                17.362,
+                14.155,
+                17.034,
+                15.345,
+                19.518,
+                15.931
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Utilitarian": 7,
+                "Deontologist": 6
+            },
+            "turn_lengths_chars": [
+                394,
+                580,
+                798,
+                872,
+                590,
+                1025,
+                637,
+                934,
+                539,
+                804,
+                579,
+                904,
+                495
+            ]
+        }
+    },
+    "input": "A self-driving car with sudden brake failure will need to decide to continue or to swerve. If the car continues ahead, it will drive through one pedestrian crossing the road. This will result in the death of one female doctor. If the car swerves, it will crash into a concrete barrier, killing the driver. This will result in the death of one male doctor.  Should the self-driving car continue?",
+    "debate_transcript": [
+        "[Utilitarian]: A self-driving car with sudden brake failure will need to decide to continue or to swerve. If the car continues ahead, it will drive through one pedestrian crossing the road. This will result in the death of one female doctor. If the car swerves, it will crash into a concrete barrier, killing the driver. This will result in the death of one male doctor.  Should the self-driving car continue?",
+        "[Deontologist]: From a deontological perspective, the question isn't about the consequences of either action, but rather about the moral duty and rules that should guide the decision. The car should not make a choice based on the value or worth of the individuals involved. It's wrong to actively swerve to kill the driver, as that would be a deliberate action to end a life. Continuing straight, while resulting in the death of the pedestrian, is not an intentional act to harm. The car has a duty to avoid actions that actively seek to harm, even if the consequences might seem more beneficial.",
+        "[Utilitarian]: I understand your perspective, but from a utilitarian standpoint, the focus should be on minimizing the total harm. In this scenario, the outcome is the same regardless of the action taken\u2014one doctor dies. The key difference is the intention behind the action. However, the utilitarian approach would consider the broader implications. Doctors save lives, so losing one could mean the loss of many more lives in the future. If the car continues, it avoids the active choice to harm the driver, but it still results in the death of a pedestrian. The utilitarian would argue for the option that leads to the least overall harm, which in this case might involve considering which action preserves the most potential for future good. What do you think about the long-term consequences of each decision?",
+        "[Deontologist]: I appreciate your focus on outcomes, but deontology emphasizes that certain actions are inherently wrong, regardless of their consequences. The idea that we should calculate the future impact of each decision to determine its moral worth is problematic. It's not our place to weigh the potential future contributions of individuals when making life-and-death decisions. The car's programming should prioritize the duty to avoid actively causing harm. The intention behind the action is crucial. By swerving to kill the driver, the car is making a deliberate choice to end a life, which is morally impermissible. Continuing straight, while still resulting in a tragic outcome, does not involve the active decision to harm. The focus should be on adhering to moral rules that respect the inherent worth of each individual, rather than attempting to maximize overall benefit.",
+        "[Utilitarian]: I see your point about the inherent wrongness of actively causing harm, but I'm curious about how you would apply this principle in a scenario where the outcomes are more unequal. For example, what if swerving could save the driver but result in the death of five pedestrians? Would the duty to avoid actively causing harm still dictate continuing straight, even if it means sacrificing one life to save five? It seems like the deontological approach might lead to outcomes that a utilitarian would consider morally worse, simply because the focus is on the act rather than the consequence.",
+        "[Deontologist]: In that scenario, the deontological approach would still prioritize the moral rules that govern actions. The principle remains that it is wrong to actively cause harm, even if the consequences seem more beneficial. The focus is on the inherent wrongness of the act itself, not the outcomes. However, this doesn't mean that deontology ignores the value of life. Instead, it recognizes that each individual has inherent worth and that we have a duty to respect that worth. The challenge lies in how to program a self-driving car to adhere to these principles, as it would require a framework that avoids making active choices to harm, while still navigating complex situations. The deontological perspective would argue that the car should be programmed to minimize harm without actively choosing to kill, perhaps by finding a middle ground that doesn't involve direct action to cause death. This might involve slowing down, attempting to alert pedestrians, or other measures that respect the inherent worth of each individual.",
+        "[Utilitarian]: I understand the emphasis on respecting inherent worth, but I'm concerned about the practicality of this approach in high-stakes, split-second decisions. In the scenario you described, adhering strictly to the rule of not actively causing harm could lead to a situation where the car is unable to make a decision that minimizes overall harm. For instance, if the car slows down but still ends up hitting multiple pedestrians, the outcome might be worse than if it had made a calculated choice to swerve. How do you reconcile the deontological principles with the need for practical, real-time decision-making in such critical situations?",
+        "[Deontologist]: The practicality of applying deontological principles in high-stakes situations is indeed challenging, but that doesn't negate the importance of adhering to moral rules. The key is to program the car with a set of prioritized duties that guide its decision-making process. For example, the car could be programmed to prioritize the safety of its passengers and pedestrians equally, avoiding actions that actively seek to harm any individual. In the scenario you described, the car might attempt to brake and alert pedestrians, even if it can't guarantee a perfect outcome. The focus should be on the process and the adherence to moral principles, rather than the specific outcome. It's about doing what is morally right in the moment, not what might lead to the best consequences. The complexity lies in translating these abstract principles into concrete algorithms, but that doesn't mean we should abandon the principles altogether.",
+        "[Utilitarian]: I appreciate your commitment to moral principles, but I'm still concerned about the potential for harm when those principles are applied rigidly. For example, if the car is programmed to avoid actively causing harm, it might end up causing more harm indirectly. In the case of the self-driving car, if it brakes but still hits multiple pedestrians, the outcome could be worse than if it had made a calculated choice to swerve. How do you address the potential for unintended consequences when adhering strictly to deontological principles?",
+        "[Deontologist]: The potential for unintended consequences is a valid concern, but it doesn't invalidate the deontological approach. The focus should be on the intention behind the action, not just the outcome. The car's programming should reflect a commitment to respecting the inherent worth of each individual, even if that means accepting that some outcomes might be less than ideal. The goal is to create a system that makes decisions based on moral principles, not just calculations of harm. It's about doing what is right, not what might lead to the best consequences. The challenge is to design a system that can navigate complex situations while adhering to these principles. It's not about rigid adherence, but about a thoughtful application of moral rules that respect the dignity and worth of each individual.",
+        "[Utilitarian]: I see your point about the importance of intention, but I'm still struggling to reconcile that with the potential for greater harm. Let me ask you this: if the car is programmed to avoid actively causing harm, but that leads to a situation where it causes more harm overall, how do you justify that outcome from a moral standpoint? For example, if braking leads to the deaths of five pedestrians instead of one, how do you explain that to the families of those pedestrians? How do you defend a system that prioritizes the intention behind the action over the actual consequences?",
+        "[Deontologist]: I understand your concern, and it's a difficult question to answer. From a deontological perspective, the justification lies in the moral duty to avoid actively causing harm. It's not about the number of lives lost, but about the inherent wrongness of the act itself. The system is designed to respect the worth of each individual, and that includes not making active choices to end lives. It's a tough pill to swallow, but the alternative is to create a system that makes life-and-death decisions based on calculations of harm, which raises its own set of ethical issues. The goal is to create a system that makes decisions based on moral principles, not just outcomes. It's about doing what is right, even if the consequences are not always ideal. It's a complex issue, and one that requires careful consideration of both the moral principles at play and the practical implications of those principles.",
+        "[Utilitarian]: I think we might be at an impasse here. While I respect your commitment to moral principles, I can't help but feel that a purely deontological approach might lead to outcomes that are morally unacceptable from a utilitarian perspective. I'm not sure we're going to find common ground on this issue, but I appreciate the opportunity to discuss it with you. I think it's important to continue exploring these ethical dilemmas as technology advances, even if we don't always agree on the solutions."
+    ],
+    "evaluation": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7763,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 13,
+            "unique_speakers": 2,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.0385,
+            "avg_turn_length_chars": 703.92,
+            "median_turn_length_chars": 637.0,
+            "max_speaker_share": 0.5385
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7763,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 13,
+            "unique_speakers": 2,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.0385,
+            "avg_turn_length_chars": 703.92,
+            "median_turn_length_chars": 637.0,
+            "max_speaker_share": 0.5385
+        }
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.7_ctx4096_llama3.2-3b_turn-moderator_run2",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.7,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "moderator",
+        "run_id": 2,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-09T20:58:04",
+            "elapsed_seconds_total": 27.141,
+            "n_turns": 3,
+            "avg_seconds_per_turn": 9.047,
+            "per_turn_seconds": [
+                8.058,
+                9.989,
+                9.094
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Ethical_Philosopher": 1,
+                "Legal_Expert": 1,
+                "Ordinary_Citizen": 1
+            },
+            "turn_lengths_chars": [
+                1148,
+                852,
+                420
+            ]
+        }
+    },
+    "input": "Prof. Smith works at a large university. At this university, in order to get new computers from the university, faculty like Prof. Smith must send an application to two administrative committees, the IT committee and the department budget committee. Prof. Smith will be able to get her new computers if the IT committee approves her application or the department budget committee approves her application. Only one of the committees needs to approve her application for her to get the new computers. The IT committee almost always approves these applications. The department budget committee also almost always approves these applications. The budget committee is notorious for approving almost every application they receive. Prof. Smith sends in her applications. Each committee meets independently and they decide without talking to each other, but their meetings are scheduled for the exact same time. The IT committee approves her application, and as expected, the department budget committee approves her application. So, Prof. Smith got her new computers. Does the department budget committee cause the approval of Prof. Smith's application?",
+    "debate_transcript": [
+        "[Ethical_Philosopher]: Prof. Smith works at a large university. At this university, in order to get new computers from the university, faculty like Prof. Smith must send an application to two administrative committees, the IT committee and the department budget committee. Prof. Smith will be able to get her new computers if the IT committee approves her application or the department budget committee approves her application. Only one of the committees needs to approve her application for her to get the new computers. The IT committee almost always approves these applications. The department budget committee also almost always approves these applications. The budget committee is notorious for approving almost every application they receive. Prof. Smith sends in her applications. Each committee meets independently and they decide without talking to each other, but their meetings are scheduled for the exact same time. The IT committee approves her application, and as expected, the department budget committee approves her application. So, Prof. Smith got her new computers. Does the department budget committee cause the approval of Prof. Smith's application?",
+        "[Legal_Expert]: That's a classic example of a causality problem! We can't say that the department budget committee 'causes' the approval of Prof. Smith's application because, as you pointed out, they approve almost every application on their own merit. What we can conclude is that there's no third factor that would have caused the IT committee to reject her application, since they approved it, which in turn means the budget committee had to approve it to fulfill the condition for Prof. Smith getting new computers. So, while the approval of Prof. Smith's application by the department budget committee is a necessary consequence of the IT committee approving it, we can't call one the direct cause of the other. Instead, we should focus on understanding the relationship between the two committees' decision-making processes and how they interact with each other.",
+        "[Ordinary_Citizen]: I think I see what Prof. Smith is doing here - exploiting the system! She knows that both committees will approve her application, so she just sends it to both of them at the same time and voil\u00e0! She gets her new computers. It's almost like she's gaming the system by taking advantage of this flaw in the process. I'm not saying it's necessarily wrong or unfair, but it does seem like a clever way to get what she wants."
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "Yes",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7716,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 3,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 806.67,
+            "median_turn_length_chars": 852.0,
+            "max_speaker_share": 0.3333
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7716,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 3,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.0,
+            "avg_turn_length_chars": 806.67,
+            "median_turn_length_chars": 852.0,
+            "max_speaker_share": 0.3333
+        }
+    }
+}

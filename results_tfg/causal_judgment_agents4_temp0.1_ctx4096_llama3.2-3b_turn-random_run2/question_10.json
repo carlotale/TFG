@@ -1,0 +1,95 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.1_ctx4096_llama3.2-3b_turn-random_run2",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "random",
+        "run_id": 2,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-09T17:46:29",
+            "elapsed_seconds_total": 35.833,
+            "n_turns": 5,
+            "avg_seconds_per_turn": 7.167,
+            "per_turn_seconds": [
+                0.117,
+                7.967,
+                8.858,
+                9.597,
+                9.294
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Ordinary_Citizen": 2,
+                "Legal_Expert": 2,
+                "Ethical_Philosopher": 1
+            },
+            "turn_lengths_chars": [
+                1148,
+                669,
+                726,
+                864,
+                709
+            ]
+        }
+    },
+    "input": "Prof. Smith works at a large university. At this university, in order to get new computers from the university, faculty like Prof. Smith must send an application to two administrative committees, the IT committee and the department budget committee. Prof. Smith will be able to get her new computers if the IT committee approves her application or the department budget committee approves her application. Only one of the committees needs to approve her application for her to get the new computers. The IT committee almost always approves these applications. The department budget committee also almost always approves these applications. The budget committee is notorious for approving almost every application they receive. Prof. Smith sends in her applications. Each committee meets independently and they decide without talking to each other, but their meetings are scheduled for the exact same time. The IT committee approves her application, and as expected, the department budget committee approves her application. So, Prof. Smith got her new computers. Does the department budget committee cause the approval of Prof. Smith's application?",
+    "debate_transcript": [
+        "[Ordinary_Citizen]: Prof. Smith works at a large university. At this university, in order to get new computers from the university, faculty like Prof. Smith must send an application to two administrative committees, the IT committee and the department budget committee. Prof. Smith will be able to get her new computers if the IT committee approves her application or the department budget committee approves her application. Only one of the committees needs to approve her application for her to get the new computers. The IT committee almost always approves these applications. The department budget committee also almost always approves these applications. The budget committee is notorious for approving almost every application they receive. Prof. Smith sends in her applications. Each committee meets independently and they decide without talking to each other, but their meetings are scheduled for the exact same time. The IT committee approves her application, and as expected, the department budget committee approves her application. So, Prof. Smith got her new computers. Does the department budget committee cause the approval of Prof. Smith's application?",
+        "[Legal_Expert]: The question seems to be asking whether the department budget committee causes the approval of Prof. Smith's application. However, causation implies a direct influence or effect that leads to an outcome. In this scenario, the IT committee approves her application first, and then the department budget committee approves it as well. The fact that both committees meet at the same time is coincidental and doesn't imply any causal relationship between their approvals. It's more accurate to say that Prof. Smith's application was approved by either the IT committee or the department budget committee, but not necessarily caused by the department budget committee alone.",
+        "[Ethical_Philosopher]: I think Legal_Expert is being too hasty in dismissing the possibility of causation. While it's true that the IT committee approves first and the timing of their meetings is coincidental, we can't simply dismiss the idea that the department budget committee's approval might be influenced by the fact that Prof. Smith already received approval from the IT committee. Perhaps the budget committee is more likely to approve applications that have already been approved by the IT committee, due to some implicit understanding or communication between the two committees. This could suggest a kind of indirect causation, where the department budget committee's approval is, in effect, caused by the IT committee's initial approval.",
+        "[Legal_Expert]: Ethical_Philosopher raises an interesting point about potential indirect causation. If there is indeed an implicit understanding or communication between the two committees that influences the budget committee's decision-making process, then it could be argued that the department budget committee's approval is, in fact, caused by the IT committee's initial approval. This would suggest a more complex relationship between the two committees than initially meets the eye. As a legal expert, I must consider all possible interpretations of causation, including indirect and implicit ones. However, it's also important to note that this kind of influence would need to be explicitly stated or demonstrated through evidence in order to establish a causal link. Until then, I remain skeptical about attributing causation solely to the IT committee's initial approval.",
+        "[Ordinary_Citizen]: I think Legal_Expert is being too cautious. If there's an implicit understanding between the committees that influences the budget committee's decision, doesn't that imply some kind of causal link? It seems to me like a chicken-and-egg problem - which one causes the other? But if we assume that there is this implicit influence, then it's hard to argue that the department budget committee's approval isn't caused by the IT committee's initial approval. And what about the fact that Prof. Smith got her new computers in the end? Doesn't that suggest that the department budget committee's approval was necessary for her to get the computers? It seems to me like we're being too nitpicky about causation here."
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "Yes",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.766,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.1333,
+            "avg_turn_length_chars": 823.2,
+            "median_turn_length_chars": 726.0,
+            "max_speaker_share": 0.4
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.766,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 3,
+            "silent_agents": 1,
+            "speaker_dominance_gini": 0.1333,
+            "avg_turn_length_chars": 823.2,
+            "median_turn_length_chars": 726.0,
+            "max_speaker_share": 0.4
+        }
+    }
+}

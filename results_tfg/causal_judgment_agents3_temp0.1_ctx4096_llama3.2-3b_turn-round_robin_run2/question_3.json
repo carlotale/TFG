@@ -1,0 +1,92 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents3_temp0.1_ctx4096_llama3.2-3b_turn-round_robin_run2",
+        "category": "causal",
+        "num_agents": 3,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 2,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 0,
+            "No": 1
+        },
+        "timing": {
+            "started_at": "2026-05-09T11:17:25",
+            "elapsed_seconds_total": 25.638,
+            "n_turns": 4,
+            "avg_seconds_per_turn": 6.41,
+            "per_turn_seconds": [
+                0.101,
+                9.34,
+                8.384,
+                7.813
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 2,
+                "Ethical_Philosopher": 1,
+                "Ordinary_Citizen": 1
+            },
+            "turn_lengths_chars": [
+                528,
+                756,
+                609,
+                589
+            ]
+        }
+    },
+    "input": "Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+    "debate_transcript": [
+        "[Causal_Scientist]: Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if more than one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+        "[Ethical_Philosopher]: That's an interesting scenario, Causal_Scientist. From a causal perspective, it might seem like Billy caused the motion detector to go off because his arrival coincided with Suzy's and triggered the device. However, I'd argue that causality isn't quite so straightforward in this case. The motion detector was already set up to be triggered by more than one person arriving at the same time, which means its activation wasn't dependent on Billy's individual actions. Instead, it seems like the motion detector was simply fulfilling its intended purpose - detecting multiple people entering the room simultaneously. So, I wouldn't say that Billy caused the motion detector to go off; rather, his arrival was a contributing factor to the device's activation.",
+        "[Ordinary_Citizen]: I agree with Ethical_Philosopher on this one. The motion detector's setup makes it clear that its purpose is not to be triggered by individual actions, but rather to detect multiple people entering the room at once. So, even if Billy's arrival coincided with Suzy's, it was more a matter of circumstance than causation. But I do think we need to consider the boss's instruction - did he know that the motion detector would trigger when two people arrived at 9 am? If so, then maybe his statement wasn't just about timing, but also about the device itself being set up in a way that would lead to this outcome.",
+        "[Causal_Scientist]: That's a great point, Ordinary_Citizen! The boss's instruction does seem to imply that he was aware of the motion detector's setup and its potential for triggering when multiple people arrive at the same time. If that's the case, then it could be argued that the boss's statement was not just about timing, but also about the device itself being set up in a way that would lead to this outcome. This raises interesting questions about the nature of causality and whether we can attribute cause to an event when there is a pre-existing condition or setup that contributes to its occurrence."
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "No",
+        "is_correct": 0,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7716,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 4,
+            "unique_speakers": 3,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.1667,
+            "avg_turn_length_chars": 620.5,
+            "median_turn_length_chars": 599.0,
+            "max_speaker_share": 0.5
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "No",
+        "is_correct": 1,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7716,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 4,
+            "unique_speakers": 3,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.1667,
+            "avg_turn_length_chars": 620.5,
+            "median_turn_length_chars": 599.0,
+            "max_speaker_share": 0.5
+        }
+    }
+}

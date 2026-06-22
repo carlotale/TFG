@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "scenario": "causal_judgment_agents4_temp0.1_ctx4096_llama3.2-3b_turn-round_robin_run0",
+        "category": "causal",
+        "num_agents": 4,
+        "temperature": 0.1,
+        "ctx_size": 4096,
+        "model": "llama3.2:3b",
+        "turn_policy": "round_robin",
+        "run_id": 0,
+        "experiment_type": "multi_agent",
+        "ollama_host": "https://ollama2.gsi.upm.es",
+        "target_scores": {
+            "Yes": 1,
+            "No": 0
+        },
+        "timing": {
+            "started_at": "2026-05-09T16:21:09",
+            "elapsed_seconds_total": 36.212,
+            "n_turns": 5,
+            "avg_seconds_per_turn": 7.242,
+            "per_turn_seconds": [
+                0.119,
+                9.273,
+                7.343,
+                10.486,
+                8.991
+            ]
+        },
+        "dynamics_raw": {
+            "speaker_counts": {
+                "Causal_Scientist": 2,
+                "Ethical_Philosopher": 1,
+                "Ordinary_Citizen": 1,
+                "Legal_Expert": 1
+            },
+            "turn_lengths_chars": [
+                419,
+                771,
+                489,
+                835,
+                670
+            ]
+        }
+    },
+    "input": "Jake desperately wants to have more money. He knows that he will inherit a lot of money when his aunt dies. One day, he sees his aunt walking by the window. He raises his rifle, gets her in the sights, and presses the trigger. Jake is an expert marksman. His hands are steady. The gun is aimed perfectly. The bullet hits her directly in the heart. She dies instantly. Did Jake shoot his aunt in the heart intentionally?",
+    "debate_transcript": [
+        "[Causal_Scientist]: Jake desperately wants to have more money. He knows that he will inherit a lot of money when his aunt dies. One day, he sees his aunt walking by the window. He raises his rifle, gets her in the sights, and presses the trigger. Jake is an expert marksman. His hands are steady. The gun is aimed perfectly. The bullet hits her directly in the heart. She dies instantly. Did Jake shoot his aunt in the heart intentionally?",
+        "[Ethical_Philosopher]: This scenario raises complex questions about intentionality and moral responsibility. While Jake's actions resulted in his aunt's death, it's unclear whether he intended to kill her specifically. His motivation for wanting more money might have driven him to commit the act, but did he consciously intend to harm or kill his aunt? The fact that he raised the rifle, got her in the sights, and pressed the trigger suggests a level of deliberation and calculation. However, it's also possible that Jake was so focused on his goal that he didn't fully consider the consequences of his actions. I'd argue that we can't definitively say whether Jake shot his aunt intentionally or not. The line between intentionality and unintentional harm is often blurry in cases like this.",
+        "[Ordinary_Citizen]: I think it's pretty clear that Jake intended to kill his aunt. He was motivated by a desire for money, which he knew would be available after her death. He took deliberate actions to prepare himself for the moment when she would die, and those actions culminated in him pulling the trigger. The fact that he's an expert marksman doesn't change the fact that he deliberately aimed his rifle at his aunt and fired it. If I had to put my money on it, I'd say Jake shot his aunt intentionally.",
+        "[Legal_Expert]: I understand why both of you would lean towards intentionality, but as a legal expert, I have to consider the nuances of negligence and duty of care in this scenario. While Jake's actions were deliberate, the question remains whether he intended to cause harm or death specifically. In many jurisdictions, the law requires intent to commit a crime, such as murder. However, there is also a concept of 'reckless disregard' for human life, which could potentially apply here. If Jake was so focused on his goal that he didn't consider the consequences of his actions, it could be argued that he acted with a reckless disregard for his aunt's safety. This would shift the focus from intentionality to negligence. I'd like to know more about how you both think the law would treat this scenario in terms of liability and potential charges.",
+        "[Causal_Scientist]: I see where Ordinary_Citizen is coming from, but I still think we're oversimplifying the situation. Jake's motivation for wanting more money might have driven him to commit the act, but that doesn't necessarily mean he intended to kill his aunt specifically. What if his goal was to inherit her wealth, and in the process of achieving that goal, he inadvertently caused her death? Would we say that's a morally equivalent situation to intentionally killing someone? I think it's also worth considering the concept of 'proximate cause.' If Jake's actions were the direct cause of his aunt's death, but not necessarily his intention, does that change our moral assessment?"
+    ],
+    "evaluation": {
+        "raw_judge_output": "Yes",
+        "verdict": "Yes",
+        "correct_option": "Yes",
+        "is_correct": 1,
+        "judge_model": "granite4.1:8b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7711,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 636.8,
+            "median_turn_length_chars": 670.0,
+            "max_speaker_share": 0.4
+        }
+    },
+    "evaluation_commandr": {
+        "raw_judge_output": "No",
+        "verdict": "No",
+        "correct_option": "Yes",
+        "is_correct": 0,
+        "judge_model": "command-r:35b",
+        "nlp_metrics": {
+            "bertscore_f1": 0.7711,
+            "bleu": 0,
+            "rouge_l": 0.0
+        },
+        "dynamics": {
+            "turns_taken": 5,
+            "unique_speakers": 4,
+            "silent_agents": 0,
+            "speaker_dominance_gini": 0.15,
+            "avg_turn_length_chars": 636.8,
+            "median_turn_length_chars": 670.0,
+            "max_speaker_share": 0.4
+        }
+    }
+}
