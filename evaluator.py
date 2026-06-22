@@ -1,5 +1,5 @@
 import os
-os.environ["OLLAMA_HOST"] = "https://ollama2.gsi.upm.es"
+os.environ["OLLAMA_HOST"] = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 
 import json
 import re
