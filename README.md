@@ -60,4 +60,4 @@ All experiments were run on the GSI inference server at UPM, using Ollama as the
 
 ## Acknowledgements
 
-This project builds on [llm-conversation](https://github.com/famiu/llm-conversation), an open-source framework for creating interactive dialogues between LLM agents.
+This project builds on [llm-conversation](https://github.com/famiu/llm_conversation), an open-source framework for creating interactive dialogues between LLM agents.
