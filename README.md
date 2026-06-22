@@ -1,4 +1,4 @@
-# TFG: Multi-Agent System Based on LLMs for Collaborative Decision-Making
+# TFG: Design and evaluation of a multi-agent system based on LLM models for collaborative decision-making
 
 **Author:** Carlota López Escobar  
 **Institution:** Universidad Politécnica de Madrid (UPM) — ETSIT  
@@ -57,3 +57,7 @@ pip install -r requirements.txt
 ## Infrastructure
 
 All experiments were run on the GSI inference server at UPM, using Ollama as the local model backend.
+
+## Acknowledgements
+
+This project builds on [llm-conversation](https://github.com/famiu/llm-conversation), an open-source framework for creating interactive dialogues between LLM agents.
