@@ -32,6 +32,14 @@ The system runs structured debates between multiple LLM agents, each assigned a 
 | Primary judge | granite4.1:8b (IBM) | IBM |
 | Second judge | command-r:35b (Cohere) | Cohere |
 
+## Configuration
+
+Set the `OLLAMA_HOST` environment variable to point to your Ollama server before running:
+
+```bash
+export OLLAMA_HOST=https://your-ollama-server.com
+```
+
 ## Requirements
 
 Install dependencies using [uv](https://github.com/astral-sh/uv):
