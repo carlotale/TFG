@@ -38,8 +38,7 @@ _ROUGE_SCORER = rouge_scorer.RougeScorer(
 )
 
 # Cliente Ollama global con timeout extendido
-OLLAMA_CLIENT = Client(host="https://ollama2.gsi.upm.es", timeout=JUDGE_TIMEOUT)
-
+OLLAMA_CLIENT = Client(host=os.environ.get("OLLAMA_HOST", "http://localhost:11434"), timeout=JUDGE_TIMEOUT)
 
 # FUNCIONES AUXILIARES
 def category_from_scenario(scenario_name: str) -> str:
