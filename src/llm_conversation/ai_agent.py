@@ -42,7 +42,7 @@ class AIAgent:
         self.model = model
         self.temperature = temperature
         self.ctx_size = ctx_size
-        self.client = Client(host="https://ollama2.gsi.upm.es", timeout=300)
+        self.client = Client(host=os.environ.get("OLLAMA_HOST", "http://localhost:11434"), timeout=300)
         
         # TODO: Use a memory system instead to not grow context size indefinitely.
         self._messages = [{"role": "system", "content": system_prompt}]
